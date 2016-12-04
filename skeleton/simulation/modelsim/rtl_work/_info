@@ -1,0 +1,1553 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Student/Desktop/real_flappy_bird/skeleton/simulation/modelsim
+vAltera_UP_PS2_Command_Out
+Z1 !s110 1480800082
+!i10b 1
+!s100 ZjDIV:z^W4aE7ECD]ReVK0
+I>=5ajZM]i<7i<zn_ob8ge2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1394232846
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Command_Out.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Command_Out.v
+Z3 L0 10
+Z4 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z5 !s108 1480800081.000000
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Command_Out.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Command_Out.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton
+n@altera_@u@p_@p@s2_@command_@out
+vAltera_UP_PS2_Data_In
+Z8 !s110 1480800081
+!i10b 1
+!s100 ee^TmQcGZ[E_>UMojW[Zg0
+Ik::=JfnPf_b=53S?:=Wdb2
+R2
+R0
+w1394232855
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Data_In.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Data_In.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Data_In.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Data_In.v|
+!i113 1
+R6
+R7
+n@altera_@u@p_@p@s2_@data_@in
+valu
+R8
+!i10b 1
+!s100 a^CcRigdNZl@DHgao99eH3
+In40A`9`W7DPOC13AgN^ao1
+R2
+R0
+Z9 w1480792200
+Z10 8C:/Users/Student/Desktop/real_flappy_bird/skeleton/processor.v
+Z11 FC:/Users/Student/Desktop/real_flappy_bird/skeleton/processor.v
+L0 469
+R4
+r1
+!s85 0
+31
+Z12 !s108 1480800080.000000
+Z13 !s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/processor.v|
+Z14 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/processor.v|
+!i113 1
+R6
+R7
+vbig_g
+R8
+!i10b 1
+!s100 R:e3LBBKdP0mPl_7=3mTG2
+I6?F67AAHAGj7IPM@NFXnj1
+R2
+R0
+R9
+R10
+R11
+L0 1250
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vbig_p
+R8
+!i10b 1
+!s100 haIQPR@OcNzCDl1b9f0QQ0
+Ig92kAMVV^8UPg^5>3_U7:2
+R2
+R0
+R9
+R10
+R11
+L0 1265
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vbypassstallcontrol
+R8
+!i10b 1
+!s100 cmho=CoB>j>S8NNUjX8CC1
+I_8DVVjiD=R]@hPZXJ2eW<1
+R2
+R0
+R9
+R10
+R11
+L0 209
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla1
+R8
+!i10b 1
+!s100 If?H4JcULbPOJZ_1V5>F?1
+I@ERSU2dN6WJj;MT@D=:gQ0
+R2
+R0
+R9
+R10
+R11
+L0 1305
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla2
+R8
+!i10b 1
+!s100 [0LHz;<SD[V>oijgjPL<V3
+IhT3Haj5U`cPIHZ@ihSIN63
+R2
+R0
+R9
+R10
+R11
+L0 1316
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla3
+R8
+!i10b 1
+!s100 FG^m37ZDlZJQ=m9VCdVaT0
+I_TU1l9Co78Ye[Z1LMEDkN1
+R2
+R0
+R9
+R10
+R11
+L0 1328
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla32mult
+R8
+!i10b 1
+!s100 CY;`d4V]:47mGk>^n?`B`0
+Id0zbjeSe@m7_7B@bWj2iJ0
+R2
+R0
+R9
+R10
+R11
+L0 1161
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla4
+R8
+!i10b 1
+!s100 M@E7<>5YKO?6izHCY:5l`2
+I>i9RUzH@=8E^oz3[<5ZJ51
+R2
+R0
+R9
+R10
+R11
+L0 1341
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla5
+R8
+!i10b 1
+!s100 H6?0WW5E9cF>ZBl2ml6201
+I>ZT0Akg]@4L;PF<aRZ:We1
+R2
+R0
+R9
+R10
+R11
+L0 1355
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla6
+R8
+!i10b 1
+!s100 `hYUIIC4FABAKeENJT0W91
+I<fO5?I_O_0h9iRz<Un4cm1
+R2
+R0
+R9
+R10
+R11
+L0 1370
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla7
+R8
+!i10b 1
+!s100 Ck9Bj=NEM^h=c?dlghaTV2
+IkP4><?e7>91I4mZOgb4:<1
+R2
+R0
+R9
+R10
+R11
+L0 1386
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla8
+R8
+!i10b 1
+!s100 7Z_@F4Zd;H0YObT:Lo<Z;2
+Ijj;oN6n`[[PbTmNFneEiT2
+R2
+R0
+R9
+R10
+R11
+L0 1403
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla_32bit
+R8
+!i10b 1
+!s100 =jFE[g2=c;>6:@<=YXI@31
+I8A?o1Yco5Q4@6A?aR2L130
+R2
+R0
+R9
+R10
+R11
+L0 1203
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vcla_8bit
+R8
+!i10b 1
+!s100 k_4=M@9T8]lkF;2KIR3;I0
+IFUG[OV=[fnkXFoKNFT?jR3
+R2
+R0
+R9
+R10
+R11
+L0 1273
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vdcontrol
+R8
+!i10b 1
+!s100 hU>?Yo4B`<VWFNg;nLkzV2
+IXCO@JnTV4zBTG_9G0z[5;3
+R2
+R0
+R9
+R10
+R11
+L0 439
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vdiv
+R8
+!i10b 1
+!s100 ljBW^[WfFTfgaYZ?04@aO2
+I^zlIA<N_VCEQZmhHoTMke3
+R2
+R0
+R9
+R10
+R11
+L0 544
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vdmem
+R8
+!i10b 1
+!s100 Mf==1Z5X5eXB?1PVG7k`T3
+IdhLl?2j?Rd]3F>nl[WzF81
+R2
+R0
+w1458863553
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.v
+Z15 L0 39
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.v|
+!i113 1
+R6
+R7
+vfiveto32decoder
+R8
+!i10b 1
+!s100 4KWgj`Re?I_52Z25oYz=72
+Ike5@cZAJE]DY9[H<iTeQ@0
+R2
+R0
+R9
+R10
+R11
+L0 821
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vflappy_tb
+!s110 1480800083
+!i10b 1
+!s100 A8=go[h7z;ieJG<N27S>l2
+I[=CB>T?Kg7z;dik5<2FNT1
+R2
+R0
+w1480799942
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1480800083.000000
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files|C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files
+vfull_add
+R8
+!i10b 1
+!s100 Q]:SYQhXNcnFo60SiN`m<3
+I3Eb:H]7J;X5U=W<W698dK0
+R2
+R0
+R9
+R10
+R11
+L0 1421
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vHexadecimal_To_Seven_Segment
+R8
+!i10b 1
+!s100 >j7dlo6D<6b_bXMV;SleR2
+I:MBEGCl@;56GM:>>LP0Je3
+R2
+R0
+w1394232862
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/Hexadecimal_To_Seven_Segment.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/Hexadecimal_To_Seven_Segment.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/Hexadecimal_To_Seven_Segment.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/Hexadecimal_To_Seven_Segment.v|
+!i113 1
+R6
+R7
+n@hexadecimal_@to_@seven_@segment
+vimem
+R8
+!i10b 1
+!s100 mRc`N<n9;SnR=4imM5oM]1
+I1WQl0[Ef]e[[^`l=?5V>@1
+R2
+R0
+w1458863566
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.v
+R15
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.v|
+!i113 1
+R6
+R7
+vimg_data
+R1
+!i10b 1
+!s100 fBC94on<VMW9oi?eUd6K]1
+I:_;W6l;k<M9<N581NgU;I2
+R2
+R0
+w1480793305
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_data.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/img_data.v
+Z16 L0 40
+R4
+r1
+!s85 0
+31
+Z17 !s108 1480800082.000000
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_data.v|
+!i113 1
+R6
+R7
+vimg_index
+R1
+!i10b 1
+!s100 48hd<Ko^4k=]THB2U<=g`2
+I9K8aJiPgId^nV3>MRYD<G2
+R2
+R0
+w1480792663
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_index.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/img_index.v
+R15
+R4
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_index.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_index.v|
+!i113 1
+R6
+R7
+vinverter32bit
+R8
+!i10b 1
+!s100 2ccUM93HUCoESZY@[2_Vg2
+I7zZ3l^nc<a30fi>3[PI7^0
+R2
+R0
+R9
+R10
+R11
+L0 1070
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vinverter5bit
+R8
+!i10b 1
+!s100 56H9j?_@_4dL_H=Ez<BLP2
+I>NmZ3??D;5QJ:YDOaQU>L3
+R2
+R0
+R9
+R10
+R11
+L0 1058
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vlcd
+DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+R1
+!i10b 1
+!s100 4d9[jBL5f6iUZ]`z^C42R1
+IM4c:C5Z^zk=1GT>fT2mCc1
+R2
+!s105 lcd_sv_unit
+S1
+R0
+w1458862580
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/lcd.sv
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/lcd.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/lcd.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/lcd.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton
+vmcontrol
+R8
+!i10b 1
+!s100 dMnfAYTFB0YB6hXOeiWS91
+IYN>V7aL:I8UTH?o[KDM5^0
+R2
+R0
+R9
+R10
+R11
+L0 375
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmult
+R8
+!i10b 1
+!s100 MXf<45L;E<MbiT4^NnHVY2
+I<C@82Kco_jE4745=f9DEg2
+R2
+R0
+R9
+R10
+R11
+L0 616
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmultdiv
+R8
+!i10b 1
+!s100 A0:hl_[O=R[1ooki2iG9C1
+I:7jeJ81kgS7IJo[29ai240
+R2
+R0
+R9
+R10
+R11
+L0 515
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmux1bit2to1
+R8
+!i10b 1
+!s100 njKT7X>Unc]?H]4^OQgIj0
+I2czKn58GFm8Vann5E5JLo2
+R2
+R0
+R9
+R10
+R11
+L0 1082
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmux32bit2to1
+R8
+!i10b 1
+!s100 =oN[dWJiM@o>P0cha7BCf3
+I?b3EJQT4P]bBF]fYYG_>j3
+R2
+R0
+R9
+R10
+R11
+L0 1119
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmux32bit4to1
+R8
+!i10b 1
+!s100 E_1?Giga2nndWa2BS]X@^1
+IZ;JM^jmgn;IIDZMM]Rb]O3
+R2
+R0
+R9
+R10
+R11
+L0 1132
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmux32bit8to1
+R8
+!i10b 1
+!s100 nY;=A>3E3A2]iU6cCYTa=0
+I`c^DJh8P98;2[l[5_iebL1
+R2
+R0
+R9
+R10
+R11
+L0 1144
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmux3bit2to1
+R8
+!i10b 1
+!s100 RCEbfOh[3K]>2PTo=`5zV3
+IL@]7EHbnS?QlYdY3:goRm1
+R2
+R0
+R9
+R10
+R11
+L0 1093
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vmux5bit2to1
+R8
+!i10b 1
+!s100 bnYUUEZQDS^oDR2Gf?^UD2
+IClClbzhXT?aCZN0TmQKf60
+R2
+R0
+R9
+R10
+R11
+L0 1106
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vnegator
+R8
+!i10b 1
+!s100 eXPW_e34Ze6HKg;c0gYc?0
+I<R=g<K?IOb;R?7Ca_5=;D3
+R2
+R0
+R9
+R10
+R11
+L0 729
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vpll
+R8
+!i10b 1
+!s100 gI=UA^4B2oa[CP@Kh3YTK1
+IjWc]mR_`ciICMgZI]NEYz1
+R2
+R0
+w1480797372
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/pll.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/pll.v
+R16
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/pll.v|
+!i113 1
+R6
+R7
+vpll_altpll
+R1
+!i10b 1
+!s100 kl>]fI0oVHideLcW7Q@7A2
+ITbDU^9AI<`Zg40?HFl4cl3
+R2
+R0
+w1480797387
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/db/pll_altpll.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/db/pll_altpll.v
+L0 30
+R4
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/db|C:/Users/Student/Desktop/real_flappy_bird/skeleton/db/pll_altpll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/db
+vprocessor
+R8
+!i10b 1
+!s100 0WKJek4@<PORlOd49LZ^d1
+I8g`aNjhX9L^U6G;hC:T1]2
+R2
+R0
+R9
+R10
+R11
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vPS2_Controller
+Z18 !s110 1480800080
+!i10b 1
+!s100 SBbk<]9<EO>4gfA4Nk28g0
+I<@aC4VbN0PoBYQNiHmkPB3
+R2
+R0
+w1458861791
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Controller.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Controller.v
+L0 9
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Controller.v|
+!i113 1
+R6
+R7
+n@p@s2_@controller
+vPS2_Interface
+R18
+!i10b 1
+!s100 U_CGUUFDk3cUc^jbb>NfB2
+IGz_Wg[3lQn@FL0dC0RCV72
+R2
+R0
+w1394308841
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Interface.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Interface.v
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Interface.v|
+!i113 1
+R6
+R7
+n@p@s2_@interface
+vregfile
+R8
+!i10b 1
+!s100 A@nW:>1dYigeg=PgD2_F61
+IjNVLo@J`VHje4=A@;Nzz11
+R2
+R0
+R9
+R10
+R11
+L0 756
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vregister
+R8
+!i10b 1
+!s100 YR_;9nhQ`ke5b;l^i83he0
+I]G=hUSc50N@Y0fVJIXQiV3
+R2
+R0
+R9
+R10
+R11
+L0 804
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vregselectequal
+R8
+!i10b 1
+!s100 0G7CNBgOl<GnBLAi6>ic;2
+Ii]aAB_ZkLX5<^_i>jb@0G1
+R2
+R0
+R9
+R10
+R11
+L0 346
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vReset_Delay
+R18
+!i10b 1
+!s100 <?EH4X[VcB<k?aKTEg:<H0
+I@?3]4oeX6Ub?Z^XFVS]lF2
+R2
+R0
+w1466747042
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/Reset_Delay.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/Reset_Delay.v
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/Reset_Delay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/Reset_Delay.v|
+!i113 1
+R6
+R7
+n@reset_@delay
+vskeleton
+R18
+!i10b 1
+!s100 _ogNkScn5I;bWz8g64L1E2
+Io2jNXlR:moeHmUIP@CG541
+R2
+R0
+w1480799006
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/skeleton.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/skeleton.v
+L0 1
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/skeleton.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/skeleton.v|
+!i113 1
+R6
+R7
+vsll
+R8
+!i10b 1
+!s100 `Z:`?cihK6IhA0`An[aL[2
+IocQc^?2LbaFBGj^7dS_0D0
+R2
+R0
+R9
+R10
+R11
+L0 858
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsll1
+R8
+!i10b 1
+!s100 Tdbcl4M3f0;2d>iK`2feM1
+I]@K5TWzLb;4SO0[SkWlzm2
+R2
+R0
+R9
+R10
+R11
+L0 902
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsll16
+R8
+!i10b 1
+!s100 <1V=XL_HhDdP@dz0n<=T`3
+IL7fb`cNPoU?CblTTUUQR;0
+R2
+R0
+R9
+R10
+R11
+L0 1017
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsll2
+R8
+!i10b 1
+!s100 ?5DGI[UVN0@YUSJM^N86K1
+Ik94VH:SW1Z3>]mHiCOV^Y3
+R2
+R0
+R9
+R10
+R11
+L0 928
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsll4
+R8
+!i10b 1
+!s100 :Se]<BR;3cV1?CEK5SzY;3
+IgJD;n=:Wn58CIcHQJQg4T3
+R2
+R0
+R9
+R10
+R11
+L0 955
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsll8
+R8
+!i10b 1
+!s100 UWPn^IG6E^PhCdc;JH4ST0
+ITjUMEIH[_noAObRzfBhhb0
+R2
+R0
+R9
+R10
+R11
+L0 984
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsll_mult
+R8
+!i10b 1
+!s100 B:olmm6S1e>9NTEjWPN0l0
+IEU_kRga_]5YIc4dT4[OfV2
+R2
+R0
+R9
+R10
+R11
+L0 747
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra
+R8
+!i10b 1
+!s100 Th[U2GZ0EIRm9zbWB3e?H3
+IQ=zfogIFXLhMX9@FN=?:A0
+R2
+R0
+R9
+R10
+R11
+L0 880
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra1
+R8
+!i10b 1
+!s100 _QgkPO6fci64Wh3@P4X1A1
+I<<82M^Bm<BR<7YQGozmVo2
+R2
+R0
+R9
+R10
+R11
+L0 915
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra16
+R8
+!i10b 1
+!s100 NOFNP0H>38?@Unc`ibKz91
+I=N:]k5b<WXLlQd]K^f1H70
+R2
+R0
+R9
+R10
+R11
+L0 1030
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra2
+R8
+!i10b 1
+!s100 0k@Z]f:Mia>8ZMIDoN:iZ3
+ILLGI]HJQ>>>T4Yc@fJ9[T1
+R2
+R0
+R9
+R10
+R11
+L0 941
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra4
+R8
+!i10b 1
+!s100 AeYd6;AQDd:H?Y?:HC^@z2
+I7YAAzK?=fMNjBcg@^DY;l2
+R2
+R0
+R9
+R10
+R11
+L0 968
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra8
+R8
+!i10b 1
+!s100 5cB[>Vn0PhPARQdGFzTB>1
+Igb^<0e7l2_HoYCJX?]O7n1
+R2
+R0
+R9
+R10
+R11
+L0 997
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vsra_mult
+R8
+!i10b 1
+!s100 d82biif_ZdzRQA8B]P8X51
+I>dO>_Q4Mk_Hm:QnBN0O=j1
+R2
+R0
+R9
+R10
+R11
+L0 738
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vthreeto8decoder
+R8
+!i10b 1
+!s100 :AG3ob<:JU5B<GZ9STlgU1
+Ij=j5k7bnFKGAYmS0IKBJL0
+R2
+R0
+R9
+R10
+R11
+L0 833
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vtwoto4decoder
+R8
+!i10b 1
+!s100 AmjSWEK[i66W_^gf`<7:V3
+Ie`9Tea;;4YBQ>S>S7SbmQ3
+R2
+R0
+R9
+R10
+R11
+L0 848
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vup_counter
+R8
+!i10b 1
+!s100 Ad<_?R1^dG6cM`S;HN1^@2
+I7A45dKaGA3CH@Hka`Q4HO1
+R2
+R0
+R9
+R10
+R11
+L0 681
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vVGA_Audio_PLL
+R18
+!i10b 1
+!s100 ]_G[h[5PmjnW=UbgX^dRW3
+IB:SCeCN_VYOc6Xf`mDaK02
+R2
+R0
+w1412884558
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/VGA_Audio_PLL.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/VGA_Audio_PLL.v
+R15
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/VGA_Audio_PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/VGA_Audio_PLL.v|
+!i113 1
+R6
+R7
+n@v@g@a_@audio_@p@l@l
+vvga_controller
+R1
+!i10b 1
+!s100 5J<Yn8FzlzlNcJXVl6iBL2
+IgBn2_g?6NUK?`fi[CBLB63
+R2
+R0
+w1480800059
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_controller.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_controller.v
+L0 1
+R4
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_controller.v|
+!i113 1
+R6
+R7
+vvga_data
+R18
+!i10b 1
+!s100 H[0c:mlBZ_j0IL[V^2FAY0
+IMaF=AGb?WG;A7U:5R80=]1
+R2
+R0
+w1480715037
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_data.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_data.v
+R16
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_data.v|
+!i113 1
+R6
+R7
+vvideo_sync_generator
+R1
+!i10b 1
+!s100 5jkgiEod8eSjhRXb_KO0n3
+I=T5lC<nI4XWNDf=G`W9zL1
+R2
+R0
+w1466743023
+8C:/Users/Student/Desktop/real_flappy_bird/skeleton/video_sync_generator.v
+FC:/Users/Student/Desktop/real_flappy_bird/skeleton/video_sync_generator.v
+L0 1
+R4
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/Student/Desktop/real_flappy_bird/skeleton/video_sync_generator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton|C:/Users/Student/Desktop/real_flappy_bird/skeleton/video_sync_generator.v|
+!i113 1
+R6
+R7
+vwcontrol
+R8
+!i10b 1
+!s100 enTfOn@ADazRWQAef<EO82
+IV=F_KjLT0dJ==m:YMn4D=1
+R2
+R0
+R9
+R10
+R11
+L0 354
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7
+vxcontrol
+R8
+!i10b 1
+!s100 a9;SVTOPHlagYjbMI:R;`0
+INY3`E7TPMTEQIiZh:e2V32
+R2
+R0
+R9
+R10
+R11
+L0 384
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R6
+R7

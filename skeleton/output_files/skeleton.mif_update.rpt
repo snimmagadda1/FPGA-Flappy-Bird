@@ -1,0 +1,83 @@
+MIF/HEX Update report for skeleton
+Sun Dec 04 17:45:20 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Sun Dec 04 17:45:20 2016 ;
+; Revision Name         ; skeleton                              ;
+; Top-level Entity Name ; skeleton                              ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE115F29C7                         ;
++-----------------------+---------------------------------------+
+
+
++---------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                      ;
++---------------------------------------------------------------------+
+; File Name                                                           ;
++---------------------------------------------------------------------+
+; C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.mif         ;
+; C:/Users/Student/Desktop/real_flappy_bird/skeleton/flappy_data.mif  ;
+; C:/Users/Student/Desktop/real_flappy_bird/skeleton/flappy_index.mif ;
+; C:/Users/Student/Desktop/real_flappy_bird/skeleton/game_screen.mif  ;
+; C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.mif         ;
++---------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Sun Dec 04 17:45:16 2016
+Info: Command: quartus_cdb skeleton -c skeleton --update_mif
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (113028): 3728 out of 4096 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.mif Line: 1
+    Warning (113027): Addresses ranging from 368 to 4095 are not initialized File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.mif Line: 1
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.mif File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/Student/Desktop/real_flappy_bird/skeleton/flappy_data.mif File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/flappy_data.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/Student/Desktop/real_flappy_bird/skeleton/flappy_index.mif File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/flappy_index.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/Student/Desktop/real_flappy_bird/skeleton/game_screen.mif File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/game_screen.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.mif File: C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.mif Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 926 megabytes
+    Info: Processing ended: Sun Dec 04 17:45:20 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

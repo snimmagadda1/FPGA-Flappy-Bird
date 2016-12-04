@@ -1,0 +1,216 @@
+--lpm_mux CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone IV E" LPM_SIZE=10 LPM_WIDTH=8 LPM_WIDTHS=4 data result sel
+--VERSION_BEGIN 16.0 cbx_lpm_mux 2016:04:27:18:05:34:SJ cbx_mgl 2016:04:27:18:06:48:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, the Altera Quartus Prime License Agreement,
+--  the Altera MegaCore Function License Agreement, or other 
+--  applicable license agreement, including, without limitation, 
+--  that your use is for the sole purpose of programming logic 
+--  devices manufactured by Altera and sold by Altera or its 
+--  authorized distributors.  Please refer to the applicable 
+--  agreement for further details.
+
+
+
+--synthesis_resources = lut 56 
+SUBDESIGN mux_lob
+( 
+	data[79..0]	:	input;
+	result[7..0]	:	output;
+	sel[3..0]	:	input;
+) 
+VARIABLE 
+	muxlut_data0w[9..0]	: WIRE;
+	muxlut_data1w[9..0]	: WIRE;
+	muxlut_data2w[9..0]	: WIRE;
+	muxlut_data3w[9..0]	: WIRE;
+	muxlut_data4w[9..0]	: WIRE;
+	muxlut_data5w[9..0]	: WIRE;
+	muxlut_data6w[9..0]	: WIRE;
+	muxlut_data7w[9..0]	: WIRE;
+	muxlut_result0w	: WIRE;
+	muxlut_result1w	: WIRE;
+	muxlut_result2w	: WIRE;
+	muxlut_result3w	: WIRE;
+	muxlut_result4w	: WIRE;
+	muxlut_result5w	: WIRE;
+	muxlut_result6w	: WIRE;
+	muxlut_result7w	: WIRE;
+	muxlut_select0w[3..0]	: WIRE;
+	muxlut_select1w[3..0]	: WIRE;
+	muxlut_select2w[3..0]	: WIRE;
+	muxlut_select3w[3..0]	: WIRE;
+	muxlut_select4w[3..0]	: WIRE;
+	muxlut_select5w[3..0]	: WIRE;
+	muxlut_select6w[3..0]	: WIRE;
+	muxlut_select7w[3..0]	: WIRE;
+	result_node[7..0]	: WIRE;
+	sel_ffs_wire[3..0]	: WIRE;
+	sel_node[3..0]	: WIRE;
+	w1004w[1..0]	: WIRE;
+	w1006w[0..0]	: WIRE;
+	w1017w[1..0]	: WIRE;
+	w1056w[3..0]	: WIRE;
+	w1058w[1..0]	: WIRE;
+	w1081w[3..0]	: WIRE;
+	w1083w[1..0]	: WIRE;
+	w1104w[1..0]	: WIRE;
+	w1106w[0..0]	: WIRE;
+	w1117w[1..0]	: WIRE;
+	w1156w[3..0]	: WIRE;
+	w1158w[1..0]	: WIRE;
+	w1181w[3..0]	: WIRE;
+	w1183w[1..0]	: WIRE;
+	w1204w[1..0]	: WIRE;
+	w1206w[0..0]	: WIRE;
+	w1217w[1..0]	: WIRE;
+	w1256w[3..0]	: WIRE;
+	w1258w[1..0]	: WIRE;
+	w1281w[3..0]	: WIRE;
+	w1283w[1..0]	: WIRE;
+	w1304w[1..0]	: WIRE;
+	w1306w[0..0]	: WIRE;
+	w1317w[1..0]	: WIRE;
+	w556w[3..0]	: WIRE;
+	w558w[1..0]	: WIRE;
+	w581w[3..0]	: WIRE;
+	w583w[1..0]	: WIRE;
+	w604w[1..0]	: WIRE;
+	w606w[0..0]	: WIRE;
+	w617w[1..0]	: WIRE;
+	w656w[3..0]	: WIRE;
+	w658w[1..0]	: WIRE;
+	w681w[3..0]	: WIRE;
+	w683w[1..0]	: WIRE;
+	w704w[1..0]	: WIRE;
+	w706w[0..0]	: WIRE;
+	w717w[1..0]	: WIRE;
+	w756w[3..0]	: WIRE;
+	w758w[1..0]	: WIRE;
+	w781w[3..0]	: WIRE;
+	w783w[1..0]	: WIRE;
+	w804w[1..0]	: WIRE;
+	w806w[0..0]	: WIRE;
+	w817w[1..0]	: WIRE;
+	w856w[3..0]	: WIRE;
+	w858w[1..0]	: WIRE;
+	w881w[3..0]	: WIRE;
+	w883w[1..0]	: WIRE;
+	w904w[1..0]	: WIRE;
+	w906w[0..0]	: WIRE;
+	w917w[1..0]	: WIRE;
+	w956w[3..0]	: WIRE;
+	w958w[1..0]	: WIRE;
+	w981w[3..0]	: WIRE;
+	w983w[1..0]	: WIRE;
+	w_mux_outputs1054w[2..0]	: WIRE;
+	w_mux_outputs1154w[2..0]	: WIRE;
+	w_mux_outputs1254w[2..0]	: WIRE;
+	w_mux_outputs554w[2..0]	: WIRE;
+	w_mux_outputs654w[2..0]	: WIRE;
+	w_mux_outputs754w[2..0]	: WIRE;
+	w_mux_outputs854w[2..0]	: WIRE;
+	w_mux_outputs954w[2..0]	: WIRE;
+
+BEGIN 
+	muxlut_data0w[] = ( data[72..72], data[64..64], data[56..56], data[48..48], data[40..40], data[32..32], data[24..24], data[16..16], data[8..8], data[0..0]);
+	muxlut_data1w[] = ( data[73..73], data[65..65], data[57..57], data[49..49], data[41..41], data[33..33], data[25..25], data[17..17], data[9..9], data[1..1]);
+	muxlut_data2w[] = ( data[74..74], data[66..66], data[58..58], data[50..50], data[42..42], data[34..34], data[26..26], data[18..18], data[10..10], data[2..2]);
+	muxlut_data3w[] = ( data[75..75], data[67..67], data[59..59], data[51..51], data[43..43], data[35..35], data[27..27], data[19..19], data[11..11], data[3..3]);
+	muxlut_data4w[] = ( data[76..76], data[68..68], data[60..60], data[52..52], data[44..44], data[36..36], data[28..28], data[20..20], data[12..12], data[4..4]);
+	muxlut_data5w[] = ( data[77..77], data[69..69], data[61..61], data[53..53], data[45..45], data[37..37], data[29..29], data[21..21], data[13..13], data[5..5]);
+	muxlut_data6w[] = ( data[78..78], data[70..70], data[62..62], data[54..54], data[46..46], data[38..38], data[30..30], data[22..22], data[14..14], data[6..6]);
+	muxlut_data7w[] = ( data[79..79], data[71..71], data[63..63], data[55..55], data[47..47], data[39..39], data[31..31], data[23..23], data[15..15], data[7..7]);
+	muxlut_result0w = (((! w617w[1..1]) # ((! w617w[0..0]) & w_mux_outputs554w[2..2])) & ((w617w[1..1] # (w617w[0..0] & w_mux_outputs554w[1..1])) # ((! w617w[0..0]) & w_mux_outputs554w[0..0])));
+	muxlut_result1w = (((! w717w[1..1]) # ((! w717w[0..0]) & w_mux_outputs654w[2..2])) & ((w717w[1..1] # (w717w[0..0] & w_mux_outputs654w[1..1])) # ((! w717w[0..0]) & w_mux_outputs654w[0..0])));
+	muxlut_result2w = (((! w817w[1..1]) # ((! w817w[0..0]) & w_mux_outputs754w[2..2])) & ((w817w[1..1] # (w817w[0..0] & w_mux_outputs754w[1..1])) # ((! w817w[0..0]) & w_mux_outputs754w[0..0])));
+	muxlut_result3w = (((! w917w[1..1]) # ((! w917w[0..0]) & w_mux_outputs854w[2..2])) & ((w917w[1..1] # (w917w[0..0] & w_mux_outputs854w[1..1])) # ((! w917w[0..0]) & w_mux_outputs854w[0..0])));
+	muxlut_result4w = (((! w1017w[1..1]) # ((! w1017w[0..0]) & w_mux_outputs954w[2..2])) & ((w1017w[1..1] # (w1017w[0..0] & w_mux_outputs954w[1..1])) # ((! w1017w[0..0]) & w_mux_outputs954w[0..0])));
+	muxlut_result5w = (((! w1117w[1..1]) # ((! w1117w[0..0]) & w_mux_outputs1054w[2..2])) & ((w1117w[1..1] # (w1117w[0..0] & w_mux_outputs1054w[1..1])) # ((! w1117w[0..0]) & w_mux_outputs1054w[0..0])));
+	muxlut_result6w = (((! w1217w[1..1]) # ((! w1217w[0..0]) & w_mux_outputs1154w[2..2])) & ((w1217w[1..1] # (w1217w[0..0] & w_mux_outputs1154w[1..1])) # ((! w1217w[0..0]) & w_mux_outputs1154w[0..0])));
+	muxlut_result7w = (((! w1317w[1..1]) # ((! w1317w[0..0]) & w_mux_outputs1254w[2..2])) & ((w1317w[1..1] # (w1317w[0..0] & w_mux_outputs1254w[1..1])) # ((! w1317w[0..0]) & w_mux_outputs1254w[0..0])));
+	muxlut_select0w[] = sel_node[];
+	muxlut_select1w[] = sel_node[];
+	muxlut_select2w[] = sel_node[];
+	muxlut_select3w[] = sel_node[];
+	muxlut_select4w[] = sel_node[];
+	muxlut_select5w[] = sel_node[];
+	muxlut_select6w[] = sel_node[];
+	muxlut_select7w[] = sel_node[];
+	result[] = result_node[];
+	result_node[] = ( muxlut_result7w, muxlut_result6w, muxlut_result5w, muxlut_result4w, muxlut_result3w, muxlut_result2w, muxlut_result1w, muxlut_result0w);
+	sel_ffs_wire[] = ( sel[3..0]);
+	sel_node[] = ( sel_ffs_wire[3..2], sel[1..0]);
+	w1004w[1..0] = muxlut_data4w[9..8];
+	w1006w[0..0] = muxlut_select4w[0..0];
+	w1017w[1..0] = muxlut_select4w[3..2];
+	w1056w[3..0] = muxlut_data5w[3..0];
+	w1058w[1..0] = muxlut_select5w[1..0];
+	w1081w[3..0] = muxlut_data5w[7..4];
+	w1083w[1..0] = muxlut_select5w[1..0];
+	w1104w[1..0] = muxlut_data5w[9..8];
+	w1106w[0..0] = muxlut_select5w[0..0];
+	w1117w[1..0] = muxlut_select5w[3..2];
+	w1156w[3..0] = muxlut_data6w[3..0];
+	w1158w[1..0] = muxlut_select6w[1..0];
+	w1181w[3..0] = muxlut_data6w[7..4];
+	w1183w[1..0] = muxlut_select6w[1..0];
+	w1204w[1..0] = muxlut_data6w[9..8];
+	w1206w[0..0] = muxlut_select6w[0..0];
+	w1217w[1..0] = muxlut_select6w[3..2];
+	w1256w[3..0] = muxlut_data7w[3..0];
+	w1258w[1..0] = muxlut_select7w[1..0];
+	w1281w[3..0] = muxlut_data7w[7..4];
+	w1283w[1..0] = muxlut_select7w[1..0];
+	w1304w[1..0] = muxlut_data7w[9..8];
+	w1306w[0..0] = muxlut_select7w[0..0];
+	w1317w[1..0] = muxlut_select7w[3..2];
+	w556w[3..0] = muxlut_data0w[3..0];
+	w558w[1..0] = muxlut_select0w[1..0];
+	w581w[3..0] = muxlut_data0w[7..4];
+	w583w[1..0] = muxlut_select0w[1..0];
+	w604w[1..0] = muxlut_data0w[9..8];
+	w606w[0..0] = muxlut_select0w[0..0];
+	w617w[1..0] = muxlut_select0w[3..2];
+	w656w[3..0] = muxlut_data1w[3..0];
+	w658w[1..0] = muxlut_select1w[1..0];
+	w681w[3..0] = muxlut_data1w[7..4];
+	w683w[1..0] = muxlut_select1w[1..0];
+	w704w[1..0] = muxlut_data1w[9..8];
+	w706w[0..0] = muxlut_select1w[0..0];
+	w717w[1..0] = muxlut_select1w[3..2];
+	w756w[3..0] = muxlut_data2w[3..0];
+	w758w[1..0] = muxlut_select2w[1..0];
+	w781w[3..0] = muxlut_data2w[7..4];
+	w783w[1..0] = muxlut_select2w[1..0];
+	w804w[1..0] = muxlut_data2w[9..8];
+	w806w[0..0] = muxlut_select2w[0..0];
+	w817w[1..0] = muxlut_select2w[3..2];
+	w856w[3..0] = muxlut_data3w[3..0];
+	w858w[1..0] = muxlut_select3w[1..0];
+	w881w[3..0] = muxlut_data3w[7..4];
+	w883w[1..0] = muxlut_select3w[1..0];
+	w904w[1..0] = muxlut_data3w[9..8];
+	w906w[0..0] = muxlut_select3w[0..0];
+	w917w[1..0] = muxlut_select3w[3..2];
+	w956w[3..0] = muxlut_data4w[3..0];
+	w958w[1..0] = muxlut_select4w[1..0];
+	w981w[3..0] = muxlut_data4w[7..4];
+	w983w[1..0] = muxlut_select4w[1..0];
+	w_mux_outputs1054w[] = ( ((w1104w[0..0] & (! w1106w[0..0])) # (w1104w[1..1] & w1106w[0..0])), ((((! w1083w[1..1]) # (w1083w[0..0] & w1081w[3..3])) # ((! w1083w[0..0]) & w1081w[2..2])) & ((w1083w[1..1] # (w1083w[0..0] & w1081w[1..1])) # ((! w1083w[0..0]) & w1081w[0..0]))), ((((! w1058w[1..1]) # (w1058w[0..0] & w1056w[3..3])) # ((! w1058w[0..0]) & w1056w[2..2])) & ((w1058w[1..1] # (w1058w[0..0] & w1056w[1..1])) # ((! w1058w[0..0]) & w1056w[0..0]))));
+	w_mux_outputs1154w[] = ( ((w1204w[0..0] & (! w1206w[0..0])) # (w1204w[1..1] & w1206w[0..0])), ((((! w1183w[1..1]) # (w1183w[0..0] & w1181w[3..3])) # ((! w1183w[0..0]) & w1181w[2..2])) & ((w1183w[1..1] # (w1183w[0..0] & w1181w[1..1])) # ((! w1183w[0..0]) & w1181w[0..0]))), ((((! w1158w[1..1]) # (w1158w[0..0] & w1156w[3..3])) # ((! w1158w[0..0]) & w1156w[2..2])) & ((w1158w[1..1] # (w1158w[0..0] & w1156w[1..1])) # ((! w1158w[0..0]) & w1156w[0..0]))));
+	w_mux_outputs1254w[] = ( ((w1304w[0..0] & (! w1306w[0..0])) # (w1304w[1..1] & w1306w[0..0])), ((((! w1283w[1..1]) # (w1283w[0..0] & w1281w[3..3])) # ((! w1283w[0..0]) & w1281w[2..2])) & ((w1283w[1..1] # (w1283w[0..0] & w1281w[1..1])) # ((! w1283w[0..0]) & w1281w[0..0]))), ((((! w1258w[1..1]) # (w1258w[0..0] & w1256w[3..3])) # ((! w1258w[0..0]) & w1256w[2..2])) & ((w1258w[1..1] # (w1258w[0..0] & w1256w[1..1])) # ((! w1258w[0..0]) & w1256w[0..0]))));
+	w_mux_outputs554w[] = ( ((w604w[0..0] & (! w606w[0..0])) # (w604w[1..1] & w606w[0..0])), ((((! w583w[1..1]) # (w583w[0..0] & w581w[3..3])) # ((! w583w[0..0]) & w581w[2..2])) & ((w583w[1..1] # (w583w[0..0] & w581w[1..1])) # ((! w583w[0..0]) & w581w[0..0]))), ((((! w558w[1..1]) # (w558w[0..0] & w556w[3..3])) # ((! w558w[0..0]) & w556w[2..2])) & ((w558w[1..1] # (w558w[0..0] & w556w[1..1])) # ((! w558w[0..0]) & w556w[0..0]))));
+	w_mux_outputs654w[] = ( ((w704w[0..0] & (! w706w[0..0])) # (w704w[1..1] & w706w[0..0])), ((((! w683w[1..1]) # (w683w[0..0] & w681w[3..3])) # ((! w683w[0..0]) & w681w[2..2])) & ((w683w[1..1] # (w683w[0..0] & w681w[1..1])) # ((! w683w[0..0]) & w681w[0..0]))), ((((! w658w[1..1]) # (w658w[0..0] & w656w[3..3])) # ((! w658w[0..0]) & w656w[2..2])) & ((w658w[1..1] # (w658w[0..0] & w656w[1..1])) # ((! w658w[0..0]) & w656w[0..0]))));
+	w_mux_outputs754w[] = ( ((w804w[0..0] & (! w806w[0..0])) # (w804w[1..1] & w806w[0..0])), ((((! w783w[1..1]) # (w783w[0..0] & w781w[3..3])) # ((! w783w[0..0]) & w781w[2..2])) & ((w783w[1..1] # (w783w[0..0] & w781w[1..1])) # ((! w783w[0..0]) & w781w[0..0]))), ((((! w758w[1..1]) # (w758w[0..0] & w756w[3..3])) # ((! w758w[0..0]) & w756w[2..2])) & ((w758w[1..1] # (w758w[0..0] & w756w[1..1])) # ((! w758w[0..0]) & w756w[0..0]))));
+	w_mux_outputs854w[] = ( ((w904w[0..0] & (! w906w[0..0])) # (w904w[1..1] & w906w[0..0])), ((((! w883w[1..1]) # (w883w[0..0] & w881w[3..3])) # ((! w883w[0..0]) & w881w[2..2])) & ((w883w[1..1] # (w883w[0..0] & w881w[1..1])) # ((! w883w[0..0]) & w881w[0..0]))), ((((! w858w[1..1]) # (w858w[0..0] & w856w[3..3])) # ((! w858w[0..0]) & w856w[2..2])) & ((w858w[1..1] # (w858w[0..0] & w856w[1..1])) # ((! w858w[0..0]) & w856w[0..0]))));
+	w_mux_outputs954w[] = ( ((w1004w[0..0] & (! w1006w[0..0])) # (w1004w[1..1] & w1006w[0..0])), ((((! w983w[1..1]) # (w983w[0..0] & w981w[3..3])) # ((! w983w[0..0]) & w981w[2..2])) & ((w983w[1..1] # (w983w[0..0] & w981w[1..1])) # ((! w983w[0..0]) & w981w[0..0]))), ((((! w958w[1..1]) # (w958w[0..0] & w956w[3..3])) # ((! w958w[0..0]) & w956w[2..2])) & ((w958w[1..1] # (w958w[0..0] & w956w[1..1])) # ((! w958w[0..0]) & w956w[0..0]))));
+END;
+--VALID FILE

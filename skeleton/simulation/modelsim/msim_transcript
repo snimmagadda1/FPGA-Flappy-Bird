@@ -1,0 +1,1300 @@
+# Reading C:/altera/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do skeleton_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_data.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_data.v 
+# -- Compiling module vga_data
+# 
+# Top level modules:
+# 	vga_data
+# End time: 16:21:20 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/VGA_Audio_PLL.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/VGA_Audio_PLL.v 
+# -- Compiling module VGA_Audio_PLL
+# 
+# Top level modules:
+# 	VGA_Audio_PLL
+# End time: 16:21:20 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/Reset_Delay.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/Reset_Delay.v 
+# -- Compiling module Reset_Delay
+# 
+# Top level modules:
+# 	Reset_Delay
+# End time: 16:21:20 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/skeleton.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/skeleton.v 
+# -- Compiling module skeleton
+# 
+# Top level modules:
+# 	skeleton
+# End time: 16:21:20 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Interface.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Interface.v 
+# -- Compiling module PS2_Interface
+# 
+# Top level modules:
+# 	PS2_Interface
+# End time: 16:21:20 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/PS2_Controller.v 
+# -- Compiling module PS2_Controller
+# 
+# Top level modules:
+# 	PS2_Controller
+# End time: 16:21:20 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/processor.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:20 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/processor.v 
+# -- Compiling module processor
+# -- Compiling module bypassstallcontrol
+# -- Compiling module regselectequal
+# -- Compiling module wcontrol
+# -- Compiling module mcontrol
+# -- Compiling module xcontrol
+# -- Compiling module dcontrol
+# -- Compiling module alu
+# -- Compiling module multdiv
+# -- Compiling module div
+# -- Compiling module mult
+# -- Compiling module up_counter
+# -- Compiling module negator
+# -- Compiling module sra_mult
+# -- Compiling module sll_mult
+# -- Compiling module regfile
+# -- Compiling module register
+# -- Compiling module fiveto32decoder
+# -- Compiling module threeto8decoder
+# -- Compiling module twoto4decoder
+# -- Compiling module sll
+# -- Compiling module sra
+# -- Compiling module sll1
+# -- Compiling module sra1
+# -- Compiling module sll2
+# -- Compiling module sra2
+# -- Compiling module sll4
+# -- Compiling module sra4
+# -- Compiling module sll8
+# -- Compiling module sra8
+# -- Compiling module sll16
+# -- Compiling module sra16
+# -- Compiling module inverter5bit
+# -- Compiling module inverter32bit
+# -- Compiling module mux1bit2to1
+# -- Compiling module mux3bit2to1
+# -- Compiling module mux5bit2to1
+# -- Compiling module mux32bit2to1
+# -- Compiling module mux32bit4to1
+# -- Compiling module mux32bit8to1
+# -- Compiling module cla32mult
+# -- Compiling module cla_32bit
+# -- Compiling module big_g
+# -- Compiling module big_p
+# -- Compiling module cla_8bit
+# -- Compiling module cla1
+# -- Compiling module cla2
+# -- Compiling module cla3
+# -- Compiling module cla4
+# -- Compiling module cla5
+# -- Compiling module cla6
+# -- Compiling module cla7
+# -- Compiling module cla8
+# -- Compiling module full_add
+# 
+# Top level modules:
+# 	processor
+# 	inverter5bit
+# 	mux3bit2to1
+# End time: 16:21:21 on Dec 03,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/pll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:21 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 16:21:21 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:21 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/imem.v 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 16:21:21 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/Hexadecimal_To_Seven_Segment.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:21 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/Hexadecimal_To_Seven_Segment.v 
+# -- Compiling module Hexadecimal_To_Seven_Segment
+# 
+# Top level modules:
+# 	Hexadecimal_To_Seven_Segment
+# End time: 16:21:21 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:21 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/dmem.v 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 16:21:21 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Data_In.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:21 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Data_In.v 
+# -- Compiling module Altera_UP_PS2_Data_In
+# 
+# Top level modules:
+# 	Altera_UP_PS2_Data_In
+# End time: 16:21:21 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Command_Out.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:21 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/Altera_UP_PS2_Command_Out.v 
+# -- Compiling module Altera_UP_PS2_Command_Out
+# 
+# Top level modules:
+# 	Altera_UP_PS2_Command_Out
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:22 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/vga_controller.v 
+# -- Compiling module vga_controller
+# 
+# Top level modules:
+# 	vga_controller
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/video_sync_generator.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:22 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/video_sync_generator.v 
+# -- Compiling module video_sync_generator
+# 
+# Top level modules:
+# 	video_sync_generator
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_index.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:22 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_index.v 
+# -- Compiling module img_index
+# 
+# Top level modules:
+# 	img_index
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_data.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:22 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/img_data.v 
+# -- Compiling module img_data
+# 
+# Top level modules:
+# 	img_data
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/db {C:/Users/Student/Desktop/real_flappy_bird/skeleton/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:22 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/db" C:/Users/Student/Desktop/real_flappy_bird/skeleton/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton {C:/Users/Student/Desktop/real_flappy_bird/skeleton/lcd.sv}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:22 on Dec 03,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton" C:/Users/Student/Desktop/real_flappy_bird/skeleton/lcd.sv 
+# -- Compiling module lcd
+# 
+# Top level modules:
+# 	lcd
+# End time: 16:21:22 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files {C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:21:23 on Dec 03,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files" C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v 
+# -- Compiling module flappy_tb
+# 
+# Top level modules:
+# 	flappy_tb
+# End time: 16:21:23 on Dec 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  flappy_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" flappy_tb 
+# Start time: 16:21:23 on Dec 03,2016
+# Loading work.flappy_tb
+# Loading work.processor
+# Loading work.register
+# Loading work.cla32mult
+# Loading work.big_g
+# Loading work.big_p
+# Loading work.cla1
+# Loading work.cla2
+# Loading work.cla3
+# Loading work.cla_8bit
+# Loading work.cla4
+# Loading work.cla5
+# Loading work.cla6
+# Loading work.cla7
+# Loading work.cla8
+# Loading work.mux32bit2to1
+# Loading altera_ver.dffe
+# Loading altera_ver.prim_gdff
+# Loading work.regfile
+# Loading work.fiveto32decoder
+# Loading work.twoto4decoder
+# Loading work.threeto8decoder
+# Loading work.dcontrol
+# Loading work.mux5bit2to1
+# Loading work.xcontrol
+# Loading work.mux32bit4to1
+# Loading work.alu
+# Loading work.inverter32bit
+# Loading work.sll
+# Loading work.sll16
+# Loading work.sll8
+# Loading work.sll4
+# Loading work.sll2
+# Loading work.sll1
+# Loading work.sra
+# Loading work.sra16
+# Loading work.sra8
+# Loading work.sra4
+# Loading work.sra2
+# Loading work.sra1
+# Loading work.cla_32bit
+# Loading work.multdiv
+# Loading work.mult
+# Loading work.up_counter
+# Loading work.negator
+# Loading work.sra_mult
+# Loading work.div
+# Loading work.sll_mult
+# Loading work.mux1bit2to1
+# Loading work.mux32bit8to1
+# Loading work.mcontrol
+# Loading work.wcontrol
+# Loading work.bypassstallcontrol
+# Loading work.regselectequal
+# Loading work.dmem
+# Loading altera_mf_ver.altsyncram
+# Loading work.imem
+# Loading work.full_add
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#                    0 << Starting the Simulation >>
+# Bird Y =      0
+# 
+# Bird Y =    400
+# 
+# Bird Y =    399
+# 
+# Bird Y =    398
+# 
+# Bird Y =    397
+# 
+# Bird Y =    396
+# 
+# Bird Y =    395
+# 
+# Bird Y =    394
+# 
+# Bird Y =    393
+# 
+# Bird Y =    392
+# 
+# Bird Y =    391
+# 
+# Bird Y =    390
+# 
+# Bird Y =    389
+# 
+# Bird Y =    388
+# 
+# Bird Y =    387
+# 
+# Bird Y =    386
+# 
+# Bird Y =    385
+# 
+# Bird Y =    384
+# 
+# Bird Y =    383
+# 
+# Bird Y =    382
+# 
+# Bird Y =    381
+# 
+# Bird Y =    380
+# 
+# Bird Y =    379
+# 
+# Bird Y =    378
+# 
+# Bird Y =    377
+# 
+# Bird Y =    376
+# 
+# Bird Y =    375
+# 
+# Bird Y =    374
+# 
+# Bird Y =    373
+# 
+# Bird Y =    372
+# 
+# Bird Y =    371
+# 
+# Bird Y =    370
+# 
+# Bird Y =    369
+# 
+# Bird Y =    368
+# 
+# Bird Y =    367
+# 
+# Bird Y =    366
+# 
+# Bird Y =    365
+# 
+# Bird Y =    364
+# 
+# Bird Y =    363
+# 
+# Bird Y =    362
+# 
+# Bird Y =    361
+# 
+# Bird Y =    360
+# 
+# Bird Y =    359
+# 
+# Bird Y =    358
+# 
+# Bird Y =    357
+# 
+# Bird Y =    356
+# 
+# Bird Y =    355
+# 
+# Bird Y =    354
+# 
+# Bird Y =    353
+# 
+# Bird Y =    352
+# 
+# Bird Y =    351
+# 
+# Bird Y =    350
+# 
+# Bird Y =    349
+# 
+# Bird Y =    348
+# 
+# Bird Y =    347
+# 
+# Bird Y =    346
+# 
+# Bird Y =    345
+# 
+# Bird Y =    344
+# 
+# Bird Y =    343
+# 
+# Bird Y =    342
+# 
+# Bird Y =    341
+# 
+# Bird Y =    340
+# 
+# Bird Y =    339
+# 
+# Bird Y =    338
+# 
+# Bird Y =    337
+# 
+# Bird Y =    336
+# 
+# Bird Y =    335
+# 
+# Bird Y =    334
+# 
+# Bird Y =    333
+# 
+# Bird Y =    332
+# 
+# Bird Y =    331
+# 
+# Bird Y =    330
+# 
+# Bird Y =    329
+# 
+# Bird Y =    328
+# 
+# Bird Y =    327
+# 
+# Bird Y =    326
+# 
+# Bird Y =    325
+# 
+# Bird Y =    324
+# 
+# Bird Y =    323
+# 
+# Bird Y =    322
+# 
+# Bird Y =    321
+# 
+# Bird Y =    320
+# 
+# Bird Y =    319
+# 
+# Bird Y =    318
+# 
+# Bird Y =    317
+# 
+# Bird Y =    316
+# 
+# Bird Y =    315
+# 
+# Bird Y =    314
+# 
+# Bird Y =    313
+# 
+# Bird Y =    312
+# 
+# Bird Y =    311
+# 
+# Bird Y =    310
+# 
+# Bird Y =    309
+# 
+# Bird Y =    308
+# 
+# Bird Y =    307
+# 
+# Bird Y =    306
+# 
+# Bird Y =    305
+# 
+# Bird Y =    304
+# 
+# Bird Y =    303
+# 
+# Bird Y =    302
+# 
+# Bird Y =    301
+# 
+# Bird Y =    300
+# 
+# Bird Y =    301
+# 
+# Bird Y =    302
+# 
+# Bird Y =    303
+# 
+# Bird Y =    304
+# 
+# Bird Y =    305
+# 
+# Bird Y =    306
+# 
+# Bird Y =    307
+# 
+# Bird Y =    308
+# 
+# Bird Y =    309
+# 
+# Bird Y =    310
+# 
+# Bird Y =    311
+# 
+# Bird Y =    312
+# 
+# Bird Y =    313
+# 
+# Bird Y =    314
+# 
+# Bird Y =    315
+# 
+# Bird Y =    316
+# 
+# Bird Y =    317
+# 
+# Bird Y =    318
+# 
+# Bird Y =    319
+# 
+# Bird Y =    320
+# 
+# Bird Y =    321
+# 
+# Bird Y =    322
+# 
+# Bird Y =    323
+# 
+# Bird Y =    324
+# 
+# Bird Y =    325
+# 
+# Bird Y =    326
+# 
+# Bird Y =    327
+# 
+# Bird Y =    328
+# 
+# Bird Y =    329
+# 
+# Bird Y =    330
+# 
+# Bird Y =    331
+# 
+# Bird Y =    332
+# 
+# Bird Y =    333
+# 
+# Bird Y =    334
+# 
+# Bird Y =    335
+# 
+# Bird Y =    336
+# 
+# Bird Y =    337
+# 
+# Bird Y =    338
+# 
+# Bird Y =    339
+# 
+# Bird Y =    340
+# 
+# Bird Y =    341
+# 
+# Bird Y =    342
+# 
+# Bird Y =    343
+# 
+# Bird Y =    344
+# 
+# Bird Y =    345
+# 
+# Bird Y =    346
+# 
+# Bird Y =    347
+# 
+# Bird Y =    348
+# 
+# Bird Y =    349
+# 
+# Bird Y =    350
+# 
+# Bird Y =    351
+# 
+# Bird Y =    352
+# 
+# Bird Y =    353
+# 
+# Bird Y =    354
+# 
+# Bird Y =    355
+# 
+# Bird Y =    356
+# 
+# Bird Y =    357
+# 
+# Bird Y =    358
+# 
+# Bird Y =    359
+# 
+# Bird Y =    360
+# 
+# Bird Y =    361
+# 
+# Bird Y =    362
+# 
+# Bird Y =    363
+# 
+# Bird Y =    364
+# 
+# Bird Y =    365
+# 
+# Bird Y =    366
+# 
+# Bird Y =    367
+# 
+# Bird Y =    368
+# 
+# Bird Y =    369
+# 
+# Bird Y =    370
+# 
+# Bird Y =    371
+# 
+# Bird Y =    372
+# 
+# Bird Y =    373
+# 
+# Bird Y =    374
+# 
+# Bird Y =    375
+# 
+# Bird Y =    376
+# 
+# Bird Y =    377
+# 
+# Bird Y =    378
+# 
+# Bird Y =    379
+# 
+# Bird Y =    380
+# 
+# Bird Y =    381
+# 
+# Bird Y =    382
+# 
+# Bird Y =    383
+# 
+# Bird Y =    384
+# 
+# Bird Y =    385
+# 
+# Bird Y =    386
+# 
+# Bird Y =    387
+# 
+# Bird Y =    388
+# 
+# Bird Y =    389
+# 
+# Bird Y =    390
+# 
+# Bird Y =    391
+# 
+# Bird Y =    392
+# 
+# Bird Y =    393
+# 
+# Bird Y =    394
+# 
+# Bird Y =    395
+# 
+# Bird Y =    396
+# 
+# Bird Y =    397
+# 
+# Bird Y =    398
+# 
+# Bird Y =    399
+# 
+# Bird Y =    400
+# 
+# Bird Y =    399
+# 
+# Bird Y =    398
+# 
+# Bird Y =    397
+# 
+# Bird Y =    396
+# 
+# Bird Y =    395
+# 
+# Bird Y =    394
+# 
+# Bird Y =    393
+# 
+# Bird Y =    392
+# 
+# Bird Y =    391
+# 
+# Bird Y =    390
+# 
+# Bird Y =    389
+# 
+# Bird Y =    388
+# 
+# Bird Y =    387
+# 
+# Bird Y =    386
+# 
+# Bird Y =    385
+# 
+# Bird Y =    384
+# 
+# Bird Y =    383
+# 
+# Bird Y =    382
+# 
+# Bird Y =    381
+# 
+# Bird Y =    380
+# 
+# Bird Y =    379
+# 
+# Bird Y =    378
+# 
+# Bird Y =    377
+# 
+# Bird Y =    376
+# 
+# Bird Y =    375
+# 
+# Bird Y =    374
+# 
+# Bird Y =    373
+# 
+# Bird Y =    372
+# 
+# Bird Y =    371
+# 
+# Bird Y =    370
+# 
+# Bird Y =    369
+# 
+# Bird Y =    368
+# 
+# Bird Y =    367
+# 
+# Bird Y =    366
+# 
+# Bird Y =    365
+# 
+# Bird Y =    364
+# 
+# Bird Y =    363
+# 
+# Bird Y =    362
+# 
+# Bird Y =    361
+# 
+# Bird Y =    360
+# 
+# Bird Y =    359
+# 
+# Bird Y =    358
+# 
+# Bird Y =    357
+# 
+# Bird Y =    356
+# 
+# Bird Y =    355
+# 
+# Bird Y =    354
+# 
+# Bird Y =    353
+# 
+# Bird Y =    352
+# 
+# Bird Y =    351
+# 
+# Bird Y =    350
+# 
+# Bird Y =    349
+# 
+# Bird Y =    348
+# 
+# Bird Y =    347
+# 
+# Bird Y =    346
+# 
+# Bird Y =    345
+# 
+# Bird Y =    344
+# 
+# Bird Y =    343
+# 
+# Bird Y =    342
+# 
+# Bird Y =    341
+# 
+# Bird Y =    340
+# 
+# Bird Y =    339
+# 
+# Bird Y =    338
+# 
+# Bird Y =    337
+# 
+# Bird Y =    336
+# 
+# Bird Y =    335
+# 
+# Bird Y =    334
+# 
+# Bird Y =    333
+# 
+# Bird Y =    332
+# 
+# Bird Y =    331
+# 
+# Bird Y =    330
+# 
+# Bird Y =    329
+# 
+# Bird Y =    328
+# 
+# Bird Y =    327
+# 
+# Bird Y =    326
+# 
+# Bird Y =    325
+# 
+# Bird Y =    324
+# 
+# Bird Y =    323
+# 
+# Bird Y =    322
+# 
+# Bird Y =    321
+# 
+# Bird Y =    320
+# 
+# Bird Y =    319
+# 
+# Bird Y =    318
+# 
+# Bird Y =    317
+# 
+# Bird Y =    316
+# 
+# Bird Y =    315
+# 
+# Bird Y =    314
+# 
+# Bird Y =    313
+# 
+# Bird Y =    312
+# 
+# Bird Y =    311
+# 
+# Bird Y =    310
+# 
+# Bird Y =    309
+# 
+# Bird Y =    308
+# 
+# Bird Y =    307
+# 
+# Bird Y =    306
+# 
+# Bird Y =    305
+# 
+# Bird Y =    304
+# 
+# Bird Y =    303
+# 
+# Bird Y =    302
+# 
+# Bird Y =    301
+# 
+# Bird Y =    300
+# 
+# Bird Y =    301
+# 
+# Bird Y =    302
+# 
+# Bird Y =    303
+# 
+# Bird Y =    304
+# 
+# Bird Y =    305
+# 
+# Bird Y =    306
+# 
+# Bird Y =    307
+# 
+# Bird Y =    308
+# 
+# Bird Y =    309
+# 
+# Bird Y =    310
+# 
+# Bird Y =    311
+# 
+# Bird Y =    312
+# 
+# Bird Y =    313
+# 
+# Bird Y =    314
+# 
+# Bird Y =    315
+# 
+# Bird Y =    316
+# 
+# Bird Y =    317
+# 
+# Bird Y =    318
+# 
+# Bird Y =    319
+# 
+# Bird Y =    320
+# 
+# Bird Y =    321
+# 
+# Bird Y =    322
+# 
+# Bird Y =    323
+# 
+# Bird Y =    324
+# 
+# Bird Y =    325
+# 
+# Bird Y =    326
+# 
+# Bird Y =    327
+# 
+# Bird Y =    328
+# 
+# Bird Y =    329
+# 
+# Bird Y =    330
+# 
+# Bird Y =    331
+# 
+# Bird Y =    332
+# 
+# Bird Y =    333
+# 
+# Bird Y =    334
+# 
+# Bird Y =    335
+# 
+# Bird Y =    336
+# 
+# Bird Y =    337
+# 
+# Bird Y =    338
+# 
+# Bird Y =    339
+# 
+# Bird Y =    340
+# 
+# Bird Y =    341
+# 
+# Bird Y =    342
+# 
+# Bird Y =    343
+# 
+# Bird Y =    344
+# 
+# Bird Y =    345
+# 
+# Bird Y =    346
+# 
+# Bird Y =    347
+# 
+# Bird Y =    348
+# 
+# Bird Y =    349
+# 
+# Bird Y =    350
+# 
+# Bird Y =    351
+# 
+# Bird Y =    352
+# 
+# Bird Y =    353
+# 
+# Bird Y =    354
+# 
+# Bird Y =    355
+# 
+# Bird Y =    356
+# 
+# Bird Y =    357
+# 
+# Bird Y =    358
+# 
+# Bird Y =    359
+# 
+# Bird Y =    360
+# 
+# Bird Y =    361
+# 
+# Bird Y =    362
+# 
+# Bird Y =    363
+# 
+# Bird Y =    364
+# 
+# Bird Y =    365
+# 
+# Bird Y =    366
+# 
+# Bird Y =    367
+# 
+# Bird Y =    368
+# 
+# Bird Y =    369
+# 
+# Bird Y =    370
+# 
+# Bird Y =    371
+# 
+# Bird Y =    372
+# 
+# Bird Y =    373
+# 
+# Bird Y =    374
+# 
+# Bird Y =    375
+# 
+# Bird Y =    376
+# 
+# Bird Y =    377
+# 
+# Bird Y =    378
+# 
+# Bird Y =    379
+# 
+# Bird Y =    380
+# 
+# Bird Y =    381
+# 
+# Bird Y =    382
+# 
+# Bird Y =    383
+# 
+# Bird Y =    384
+# 
+# Bird Y =    385
+# 
+# Bird Y =    386
+# 
+# Bird Y =    387
+# 
+# Bird Y =    388
+# 
+# Bird Y =    389
+# 
+# Bird Y =    390
+# 
+# Bird Y =    391
+# 
+# Bird Y =    392
+# 
+# Bird Y =    393
+# 
+# Bird Y =    394
+# 
+# Bird Y =    395
+# 
+# Bird Y =    396
+# 
+# Bird Y =    397
+# 
+# Bird Y =    398
+# 
+# Bird Y =    399
+# 
+# Bird Y =    400
+# 
+# Bird Y =    399
+# 
+# Bird Y =    398
+# 
+# Bird Y =    397
+# 
+# Bird Y =    396
+# 
+# Bird Y =    395
+# 
+# Bird Y =    394
+# 
+# Bird Y =    393
+# 
+# Bird Y =    392
+# 
+# Bird Y =    391
+# 
+# Bird Y =    390
+# 
+# Bird Y =    389
+# 
+# Bird Y =    388
+# 
+# Bird Y =    387
+# 
+# Bird Y =    386
+# 
+# Bird Y =    385
+# 
+# Bird Y =    384
+# 
+# Bird Y =    383
+# 
+# Bird Y =    382
+# 
+# Bird Y =    381
+# 
+# Bird Y =    380
+# 
+# Bird Y =    379
+# 
+# Bird Y =    378
+# 
+# Bird Y =    377
+# 
+# Bird Y =    376
+# 
+# Bird Y =    375
+# 
+# Bird Y =    374
+# 
+# Bird Y =    373
+# 
+# Bird Y =    372
+# 
+# Bird Y =    371
+# 
+# Bird Y =    370
+# 
+# Bird Y =    369
+# 
+# Bird Y =    368
+# 
+# Bird Y =    367
+# 
+# Bird Y =    366
+# 
+# Bird Y =    365
+# 
+# Bird Y =    364
+# 
+# Bird Y =    363
+# 
+# Bird Y =    362
+# 
+# Bird Y =    361
+# 
+# Bird Y =    360
+# 
+# Bird Y =    359
+# 
+# Bird Y =    358
+# 
+# Bird Y =    357
+# 
+# Bird Y =    356
+# 
+# Bird Y =    355
+# 
+# Bird Y =    354
+# 
+# Bird Y =    353
+# 
+# Bird Y =    352
+# 
+# Bird Y =    351
+# 
+# Bird Y =    350
+# 
+# Bird Y =    349
+# 
+# Bird Y =    348
+# 
+# Bird Y =    347
+# 
+# Bird Y =    346
+# 
+# Bird Y =    345
+# 
+# Bird Y =    344
+# 
+# Bird Y =    343
+# 
+# Bird Y =    342
+# 
+# Bird Y =    341
+# 
+# Bird Y =    340
+# 
+# Bird Y =    339
+# 
+# Bird Y =    338
+# 
+# Bird Y =    337
+# 
+# Bird Y =    336
+# 
+# Bird Y =    335
+# 
+# Bird Y =    334
+# 
+# Bird Y =    333
+# 
+# Bird Y =    332
+# 
+# Bird Y =    331
+# 
+# Bird Y =    330
+# 
+# Bird Y =    329
+# 
+# Bird Y =    328
+# 
+# Bird Y =    327
+# 
+# Bird Y =    326
+# 
+# Bird Y =    325
+# 
+# ** Note: $stop    : C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v(17)
+#    Time: 200 us  Iteration: 0  Instance: /flappy_tb
+# Break in Module flappy_tb at C:/Users/Student/Desktop/real_flappy_bird/skeleton/output_files/flappy_tb.v line 17
+# End time: 16:21:53 on Dec 03,2016, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 0

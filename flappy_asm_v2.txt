@@ -1,0 +1,381 @@
+.text 
+main: addi $r1, $r0, 240 # bird y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r2, $r0, 575 # pipe x coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r3, $r0, 200 # pipe y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r7, $r0, 15000 # animation delay
+noop
+noop
+noop
+noop
+noop
+addi $r8, $r0, 1 # jump lower lim
+noop
+noop
+noop
+noop
+noop
+addi $r9, $r0, 12 # jump height
+noop
+noop
+noop
+noop
+noop
+addi $r13, $r0, 450 # bird lowest limit
+noop
+noop
+noop
+noop
+noop
+addi $r14, $r0, 5 # pipe left limit
+noop
+noop
+noop
+noop
+noop
+addi $r19, $r0, 320 # bird x left side
+noop
+noop
+noop
+noop
+addi $r20, $r0, 360 # bird x right side
+noop
+noop
+noop
+noop
+noop
+addi $r10, $r0, 0 # reset game over flag
+noop
+noop
+noop
+noop
+noop
+addi $r11, $r0, 0 # reset game score
+
+
+loop: noop
+noop
+noop
+noop
+noop
+jal move_pipe
+noop
+noop
+noop
+noop
+noop
+jal bird_fall
+noop
+noop
+noop
+noop
+noop
+jal check_collision
+noop
+noop
+noop
+noop
+noop
+jal animation_delay
+noop
+noop
+noop
+noop
+noop
+bex jump_initiated
+noop
+noop
+noop
+noop
+noop
+j loop
+
+jump_initiated: noop
+noop
+noop
+noop
+noop
+sub $r12, $r12, $r12 # reset jump counter
+noop
+noop
+noop
+noop
+noop
+jumping_loop: noop
+noop
+noop
+noop
+noop
+jal move_pipe
+noop
+noop
+noop
+noop
+noop
+jal bird_jump
+noop
+noop
+noop
+noop
+noop
+jal check_collision
+noop
+noop
+noop
+noop
+noop
+jal animation_delay
+noop
+noop
+noop
+noop
+noop
+bex jump_initiated
+noop
+noop
+noop
+noop
+noop
+bne $r12, $r9, jumping_loop
+noop
+noop
+noop
+noop
+noop
+j loop
+
+
+move_pipe: noop
+noop
+noop
+noop
+noop
+bne $r14, $r2, keep_moving_left
+noop
+noop
+noop
+noop
+noop
+addi $r2, $r0, 575 # bring pipe back to right side
+noop
+noop
+noop
+noop
+noop
+keep_moving_left: addi $r2, $r2, -1
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+bird_fall: noop
+noop
+noop
+noop
+noop
+bne $r1, $r13, keep_falling
+noop
+noop
+noop
+noop
+noop
+addi $r1, $r1, -1 # stop the bird from falling at bottom of screen
+noop
+noop
+noop
+noop
+noop
+keep_falling: addi $r1, $r1, 1
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+bird_jump: noop
+noop
+noop
+noop
+noop
+bne $r1, $r0, keep_jumping
+noop
+noop
+noop
+noop
+noop
+addi $r1, $r1, 1
+noop
+noop
+noop
+noop
+noop
+keep_jumping: addi $r1, $r1, -1
+noop
+noop
+noop
+noop
+noop
+addi $r12, $r12, 1
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+check_collision: noop
+noop
+noop
+noop
+noop
+noop
+addi $r15, $r3, -75 # upper pipe bottom 
+noop
+noop
+noop
+noop
+noop
+addi $r16, $r3, 75 # lower pipe top
+noop
+noop
+noop
+noop
+noop
+addi $r17, $r2, -27 # pipes left
+noop
+noop
+noop
+noop
+noop
+addi $r18, $r2, 27 # pipes right
+noop
+noop
+noop
+noop
+noop
+blt $r17, $r20, bird_right_of_pipes
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+bird_right_of_pipes: noop
+noop
+noop
+noop
+noop
+blt $r19, $r18, bird_between_pipes
+noop
+noop
+noop
+noop
+noop
+bne $r19, $r18, skip_add # checking if bird at right limit of pipes
+noop
+noop
+noop
+noop
+noop
+addi $r11, $r11, 1 # increment game score
+skip_add: noop
+noop
+noop
+noop
+noop
+jr $r31
+
+bird_between_pipes: noop
+noop
+noop
+noop
+noop
+addi $r21, $r1, 30 # bird y bottom
+noop
+noop
+noop
+noop
+noop
+blt $r16, $r21, collision_detected
+noop
+noop
+noop
+noop
+noop
+blt $r1, $r15, collision_detected
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+collision_detected: noop
+noop
+noop
+noop
+noop
+noop
+addi $r10, $r0, 1 # set gameover_flag
+noop
+noop
+noop
+noop
+noop
+jal animation_delay
+noop
+noop
+noop
+noop
+noop
+bex main # exit on button press
+noop
+noop
+noop
+noop
+noop
+j collision_detected
+
+animation_delay: noop
+noop
+noop
+noop
+noop
+noop
+addi $r6, $r6, 1 # increment delay counter
+noop
+noop
+noop
+noop
+noop
+bne $r6, $r7, animation_delay
+noop
+noop
+noop
+noop
+noop
+sub $r6, $r6, $r6
+noop
+noop
+noop
+noop
+noop
+jr $r31
