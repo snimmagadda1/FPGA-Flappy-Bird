@@ -1,8 +1,8 @@
-module processor(clock, reset, ps2_key_pressed, bird_y, pipe1_x, pipe1_y, gameover_flag, game_score);
+module processor(clock, reset, ps2_key_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag, game_score);
 
 	input clock, reset, ps2_key_pressed;
 	
-	output [31:0] bird_y, pipe1_x, pipe1_y, game_score;
+	output [31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, game_score;
 	
 	output gameover_flag;
 	
@@ -69,7 +69,7 @@ module processor(clock, reset, ps2_key_pressed, bird_y, pipe1_x, pipe1_y, gameov
 	wire [31:0] writeback, DXAin, DXAout, DXBin, DXBout, regAout, regBout;
 	wire [4:0] ra, rb, rw;
 	wire we;
-	regfile registerfile(clock, we, reset, rw, ra, rb, writeback, regAout, regBout, bird_y, pipe1_x, pipe1_y, gameover_flag_long, game_score);
+	regfile registerfile(clock, we, reset, rw, ra, rb, writeback, regAout, regBout, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag_long, game_score);
 	
 	assign gameover_flag = gameover_flag_long[0];
 	
@@ -759,7 +759,7 @@ module sll_mult(upper, lower, out);
 endmodule
 
 module regfile(clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg, 
-ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_y, pipe1_x, pipe1_y, gameover_flag_long, game_score);
+ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag_long, game_score);
 	input clock, ctrl_writeEnable, ctrl_reset;
    input[4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
    input[31:0] data_writeReg;
@@ -772,7 +772,7 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_
 	wire[31:0] ctrl_readA_decoded;
 	wire[31:0] ctrl_readB_decoded;
 	
-	output[31:0] bird_y, pipe1_x, pipe1_y, gameover_flag_long, game_score;
+	output[31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag_long, game_score;
 	
 	fiveto32decoder rw(.ctrl(ctrl_writeReg), .onehot(ctrl_write_decoded));
 	fiveto32decoder ra(.ctrl(ctrl_readRegA), .onehot(ctrl_readA_decoded));
@@ -806,6 +806,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_
 	assign bird_y = readOut[1];
 	assign pipe1_x = readOut[2];
 	assign pipe1_y = readOut[3];
+	assign pipe2_x = readOut[4];
+	assign pipe2_y = readOut[5];
 	assign gameover_flag_long = readOut[10];
 	assign game_score = readOut[11];
 endmodule

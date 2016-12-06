@@ -5,9 +5,9 @@ $r2 = Pipe 1 X Position
 
 $r3 = Pipe 1 Y Position
 
-$r4 = Reserved for pipes 
+$r4 = Pipe 2 X Position
 
-$r5 = Reserved for pipes
+$r5 = Pipe 2 Y Position
 
 $r6 = Delay Counter
 
@@ -27,13 +27,13 @@ $r13 = Screen lower limit
 
 $r14 = Pipe left limit
 
-$r15 = Upper pipe bottom
+$r15 = Upper pipe 1 bottom
 
-$r16 = Lower pipe top
+$r16 = Lower pipe 1 top
 
-$r17 = Pipes left
+$r17 = Pipes 1 left
 
-$r18 = Pipes right
+$r18 = Pipes 1 right
 
 $r19 = Bird x left
 
@@ -41,4 +41,12 @@ $r20 = Bird x right
 
 $r21 = Bird y bottom
 
-$r22 = Gameover delay
+$r22 = Gameover Delay
+
+$r23 = Upper pipe 2 bottom
+
+$r24 = lower pipe 2 top
+
+$r25 = pipes 2 left
+
+$r26 = pipes 2 right

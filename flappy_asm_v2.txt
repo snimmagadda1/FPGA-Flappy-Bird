@@ -5,13 +5,25 @@ noop
 noop
 noop
 noop
-addi $r2, $r0, 575 # pipe x coordinate
+addi $r2, $r0, 575 # pipe 1 x coordinate
 noop
 noop
 noop
 noop
 noop
-addi $r3, $r0, 200 # pipe y coordinate
+addi $r3, $r0, 200 # pipe 1 y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r4, $r0, 150 # pipe 2 x coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r5, $r0, 350 # pipe 2 y coordinate
 noop
 noop
 noop

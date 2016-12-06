@@ -50,7 +50,7 @@ module skeleton(resetn,
 	input button_pressed;
 	
 	
-	wire [31:0] bird_y, pipe1_x, pipe1_y, game_score;
+	wire [31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, game_score;
 	
 	wire gameover_flag;
 	
@@ -67,7 +67,7 @@ module skeleton(resetn,
 	//assign clock = inclock;
 	
 	// your processor
-	processor myprocessor(clock, ~resetn, ~button_pressed, bird_y, pipe1_x, pipe1_y, gameover_flag, game_score);
+	processor myprocessor(clock, ~resetn, ~button_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag, game_score);
 	
 	// keyboard controller
 	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
@@ -102,6 +102,8 @@ module skeleton(resetn,
 								 .bird_y_long(bird_y),
 								 .pipe1_x_long(pipe1_x),
 								 .pipe1_y_long(pipe1_y),
+								 .pipe2_x_long(pipe2_x),
+								 .pipe2_y_long(pipe2_y),
 								 .gameover_flag(gameover_flag));
 	
 	

@@ -9,6 +9,8 @@ module vga_controller(iRST_n,
 							 bird_y_long,
 							 pipe1_x_long,
 							 pipe1_y_long,
+							 pipe2_x_long,
+							 pipe2_y_long,
 							 gameover_flag);
 input iRST_n;
 input iVGA_CLK;
@@ -30,7 +32,7 @@ wire cBLANK_n,cHS,cVS,rst;
 //// ANIMATION
 
 reg [18:0] bird_x = 19'd320;
-input [31:0] bird_y_long, pipe1_x_long, pipe1_y_long;
+input [31:0] bird_y_long, pipe1_x_long, pipe1_y_long, pipe2_x_long, pipe2_y_long;
 input gameover_flag;
 
 
@@ -42,6 +44,12 @@ assign pipe_x = pipe1_x_long[18:0];
 
 wire [18:0] pipe_y;
 assign pipe_y = pipe1_y_long[18:0];
+
+wire [18:0] pipe2_x;
+assign pipe2_x = pipe2_x_long[18:0];
+
+wire [18:0] pipe2_y;
+assign pipe2_y = pipe2_y_long[18:0];
 
 reg [18:0] gap_width = 19'd150;
 
@@ -64,6 +72,16 @@ wire [18:0] upper_pipe_width = 19'd54;
 wire [18:0] upper_pipe_height = 19'd120;
 wire [16:0] upper_pipe_static_start = 17'd82;
 reg [16:0] upper_pipe_static_curr = 17'd82;
+
+wire [18:0] lower_pipe2_width = 19'd54;
+wire [18:0] lower_pipe2_height = 19'd120;
+wire [16:0] lower_pipe2_static_start = 17'd82;
+reg [16:0] lower_pipe2_static_curr = 17'd82;
+
+wire [18:0] upper_pipe2_width = 19'd54;
+wire [18:0] upper_pipe2_height = 19'd120;
+wire [16:0] upper_pipe2_static_start = 17'd82;
+reg [16:0] upper_pipe2_static_curr = 17'd82;
 
 wire [18:0] gameover_width = 19'd330;
 wire [18:0] gameover_height = 19'd60;
@@ -89,9 +107,23 @@ reg [18:0] upper_pipe_right = 19'd0;
 reg [18:0] upper_pipe_top = 19'd0;
 reg [18:0] upper_pipe_bottom = 19'd0;
 
+reg [18:0] lower_pipe2_left = 19'd0;
+reg [18:0] lower_pipe2_right = 19'd0;
+reg [18:0] lower_pipe2_top = 19'd0;
+reg [18:0] lower_pipe2_bottom = 19'd0;
+
+reg [18:0] upper_pipe2_left = 19'd0;
+reg [18:0] upper_pipe2_right = 19'd0;
+reg [18:0] upper_pipe2_top = 19'd0;
+reg [18:0] upper_pipe2_bottom = 19'd0;
+
 reg [18:0] lower_pipe_pixels_drawn = 19'd0;
 
 reg [18:0] upper_pipe_pixels_drawn = 19'd0;
+
+reg [18:0] lower_pipe2_pixels_drawn = 19'd0;
+
+reg [18:0] upper_pipe2_pixels_drawn = 19'd0;
 
 
 reg [18:0] gameover_left = 19'd0;
@@ -108,6 +140,8 @@ reg [18:0] dynamic_ADDR;
 reg drawing_bird = 1'b0;
 reg drawing_lower_pipe = 1'b0;
 reg drawing_upper_pipe = 1'b0;
+reg drawing_lower_pipe2 = 1'b0;
+reg drawing_upper_pipe2 = 1'b0;
 reg drawing_gameover = 1'b0;
 
 ////
@@ -121,6 +155,16 @@ wire [18:0] upper_pipe_x;
 assign upper_pipe_x = pipe_x - upper_pipe_width/2;
 wire [18:0] upper_pipe_y;
 assign upper_pipe_y = 19'd0;
+
+wire [18:0] lower_pipe2_x;
+assign lower_pipe2_x = pipe2_x - lower_pipe2_width/2;
+wire [18:0] lower_pipe2_y;
+assign lower_pipe2_y = pipe2_y + gap_width/2;
+
+wire [18:0] upper_pipe2_x;
+assign upper_pipe2_x = pipe2_x - upper_pipe2_width/2;
+wire [18:0] upper_pipe2_y;
+assign upper2_pipe_y = 19'd0;
 
 
 ////
@@ -150,21 +194,27 @@ begin
 	  bird_pixels_drawn=19'd0;
 	  lower_pipe_pixels_drawn=19'd0;
 	  upper_pipe_pixels_drawn=19'd0;
+	  lower_pipe2_pixels_drawn=19'd0;
+	  upper_pipe2_pixels_drawn=19'd0;
 	  gameover_pixels_drawn = 19'd0;
 	  
 	  bird_static_curr=bird_static_start;
 	  lower_pipe_static_curr=lower_pipe_static_start;
 	  upper_pipe_static_curr=upper_pipe_static_start;
+	  lower_pipe2_static_curr=lower_pipe2_static_start;
+	  upper_pipe2_static_curr=upper_pipe2_static_start;
 	  gameover_static_curr = gameover_static_start;
 	  
 	  drawing_bird=1'b0;
 	  drawing_lower_pipe=1'b0;
 	  drawing_upper_pipe=1'b0;
+	  drawing_lower_pipe2=1'b0;
+	  drawing_upper_pipe2=1'b0;
 	  drawing_gameover = 1'b0;
 	  
 	  animation_count = animation_count + 1;
 	  
-	  if (animation_count == 5'd30)
+	  if (animation_count == 5'd30) // BLACK FUCKING MAGIC
 		begin
 			animation_count = 6'd0;	
 			
@@ -183,6 +233,16 @@ begin
 			upper_pipe_top <= upper_pipe_y;
 			upper_pipe_bottom <= pipe_y-gap_width/2;
 			
+			lower_pipe2_left <= lower_pipe2_x;
+			lower_pipe2_right <= (lower_pipe2_x + lower_pipe2_width);
+			lower_pipe2_top <= lower_pipe2_y;
+			lower_pipe2_bottom <= screen_height;
+		
+			upper_pipe2_left <= upper_pipe2_x;
+			upper_pipe2_right <= (upper_pipe2_x + upper_pipe2_width);
+			upper_pipe2_top <= upper_pipe2_y;
+			upper_pipe2_bottom <= pipe2_y-gap_width/2;
+			
 			gameover_left <= 19'd155;
 			gameover_right <= 19'd155 + gameover_width;
 			gameover_top <= 19'd175;
@@ -199,16 +259,22 @@ begin
 	  bird_pixels_drawn=19'd0;
 	  lower_pipe_pixels_drawn=19'd0;
 	  upper_pipe_pixels_drawn=19'd0;
+	  lower_pipe2_pixels_drawn=19'd0;
+	  upper_pipe2_pixels_drawn=19'd0;
 	  gameover_pixels_drawn = 19'd0;
 	  
 	  bird_static_curr=bird_static_start;
 	  lower_pipe_static_curr=lower_pipe_static_start;
 	  upper_pipe_static_curr=upper_pipe_static_start;
+	  lower_pipe2_static_curr=lower_pipe2_static_start;
+	  upper_pipe2_static_curr=upper_pipe2_static_start;
 	  gameover_static_curr = gameover_static_start;
 	  
 	  drawing_bird=1'b0;
 	  drawing_lower_pipe=1'b0;
 	  drawing_upper_pipe=1'b0;
+	  drawing_lower_pipe2=1'b0;
+	  drawing_upper_pipe2=1'b0;
 	  drawing_gameover = 1'b0;
 	  
 	  animation_count = animation_count + 1;
@@ -231,6 +297,16 @@ begin
 			upper_pipe_right <= (upper_pipe_x + upper_pipe_width);
 			upper_pipe_top <= upper_pipe_y;
 			upper_pipe_bottom <= pipe_y-gap_width/2;
+			
+			lower_pipe2_left <= lower_pipe2_x;
+			lower_pipe2_right <= (lower_pipe2_x + lower_pipe2_width);
+			lower_pipe2_top <= lower_pipe2_y;
+			lower_pipe2_bottom <= screen_height;
+		
+			upper_pipe2_left <= upper_pipe2_x;
+			upper_pipe2_right <= (upper_pipe2_x + upper_pipe2_width);
+			upper_pipe2_top <= upper_pipe2_y;
+			upper_pipe2_bottom <= pipe2_y-gap_width/2;
 			
 			gameover_left <= 19'd155;
 			gameover_right <= 19'd155 + gameover_width;
@@ -326,6 +402,67 @@ begin
 		  begin
 		     drawing_upper_pipe=1'b0;
 			  upper_pipe_static_curr=static_ADDR;
+		  end
+	  end
+	  
+	  
+	  
+	  
+	   if (dynamic_ADDR % screen_width >= lower_pipe2_left && dynamic_ADDR % screen_width <= lower_pipe2_right
+	      && (dynamic_ADDR/640) % screen_height >= lower_pipe2_top && (dynamic_ADDR/640) % screen_height <= lower_pipe2_bottom)
+	  begin
+	     if (~drawing_lower_pipe2)
+		  begin
+		     drawing_lower_pipe2=1'b1;
+			  static_ADDR=lower_pipe2_static_curr;
+		  end
+		  if (static_ADDR >= 640*120)
+		  begin
+		     static_ADDR=lower_pipe2_static_start;
+		  end
+	     static_ADDR=static_ADDR+1;
+		  lower_pipe2_pixels_drawn=lower_pipe2_pixels_drawn+1;
+		  if (lower_pipe2_pixels_drawn == lower_pipe2_width+1)
+		  begin
+		     lower_pipe2_pixels_drawn=19'd0;
+		     static_ADDR=static_ADDR+(screen_width-lower_pipe2_width)-1;
+		  end
+	  end
+	  else
+	  begin
+	     if (drawing_lower_pipe2)
+		  begin
+		     drawing_lower_pipe2=1'b0;
+			  lower_pipe2_static_curr=static_ADDR;
+		  end
+	  end
+	  
+	  if (dynamic_ADDR % screen_width >= upper_pipe2_left && dynamic_ADDR % screen_width <= upper_pipe2_right
+	      && (dynamic_ADDR/640) % screen_height >= upper_pipe2_top && (dynamic_ADDR/640) % screen_height <= upper_pipe2_bottom)
+	  begin
+	     if (~drawing_upper_pipe2)
+		  begin
+		     drawing_upper_pipe2=1'b1;
+			  static_ADDR=upper_pipe2_static_curr;
+		  end
+		  if (static_ADDR >= 640*120)
+		  begin
+		     static_ADDR=upper_pipe2_static_start;
+		  end
+	     static_ADDR=static_ADDR+1;
+		  upper_pipe2_pixels_drawn=upper_pipe2_pixels_drawn+1;
+		  if (upper_pipe2_pixels_drawn == upper_pipe2_width+1)
+		  begin
+		     upper_pipe2_pixels_drawn=19'd0;
+		     static_ADDR=static_ADDR+(screen_width-upper_pipe2_width)-1;
+		  end
+	  end
+	  else
+	  begin
+	     if (drawing_upper_pipe2)
+		  begin
+		     drawing_upper_pipe2=1'b0;
+			  upper_pipe2_static_curr=static_ADDR;
 		  end
 	  end
 	  
