@@ -49,14 +49,22 @@ module skeleton(resetn,
 	
 	input button_pressed;
 	
+	wire butt_pressed;
+	assign butt_pressed = ~button_pressed;
+
 	
-	wire [31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, game_score;
+	
+	wire [31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, game_score, game_score_disp;
 	
 	wire gameover_flag;
+	
+	wire collision_flag;
 	
 	wire [7:0] game_ascii;
 	
 	assign game_ascii = game_score[7:0] + 7'd48;
+
+
 
 	
 	// clock divider (by 20, i.e., 2.5 MHz)
@@ -65,9 +73,16 @@ module skeleton(resetn,
 	
 	// UNCOMMENT FOLLOWING LINE AND COMMENT ABOVE LINE TO RUN AT 50 MHz
 	//assign clock = inclock;
+//	
+//	lfsr_32bit PRNG1(clock, resetn, pipe1randout, 32'hf0f0f0f0);
+//	lfsr_32bit PRNG2(clock, resetn, pipe2randout, 32'hffffffff);
+//	lfsr_32bit PRNG3(clock, resetn, pipe3randout, 32'h00000000);
+//	assign pipe1_y = pipe1randout % 200 + 240;
+//	assign pipe2_y = pipe2randout % 200 + 240;
+//	assign pipe3_y = pipe3randout % 200 + 240;
 	
 	// your processor
-	processor myprocessor(clock, ~resetn, ~button_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag, game_score);
+	processor myprocessor(clock, ~resetn, butt_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, gameover_flag, game_score, collision_flag);
 	
 	// keyboard controller
 	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
@@ -76,9 +91,9 @@ module skeleton(resetn,
 	lcd mylcd(clock, ~resetn, 1'b0, game_ascii, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
 	
 	// example for sending ps2 data to the first two seven segment displays
-	decimal_to_seven_segment dig1(game_score % 10, seg1);
-	decimal_to_seven_segment dig2((game_score/10) % 10, seg2);
-	decimal_to_seven_segment dig3((game_score/100) % 10, seg3);
+	decimal_to_seven_segment dig1(game_score_disp % 10, seg1);
+	decimal_to_seven_segment dig2((game_score_disp/10) % 10, seg2);
+	decimal_to_seven_segment dig3((game_score_disp/100) % 10, seg3);
 	Hexadecimal_To_Seven_Segment hex4(4'b0, seg4);
 	Hexadecimal_To_Seven_Segment hex5(4'b0, seg5);
 	Hexadecimal_To_Seven_Segment hex6(4'b0, seg6);
@@ -86,7 +101,7 @@ module skeleton(resetn,
 	Hexadecimal_To_Seven_Segment hex8(4'b0, seg8);
 	
 	// some LEDs that you could use for debugging if you wanted
-	assign leds = 8'b00101011;
+	assign leds = 8'b00010100;
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
@@ -104,7 +119,12 @@ module skeleton(resetn,
 								 .pipe1_y_long(pipe1_y),
 								 .pipe2_x_long(pipe2_x),
 								 .pipe2_y_long(pipe2_y),
-								 .gameover_flag(gameover_flag));
+								 .pipe3_x_long(pipe3_x),
+								 .pipe3_y_long(pipe3_y),
+								 .gameover_flag(gameover_flag),
+								 .collision_flag(collision_flag),
+								 .game_score(game_score),
+								 .game_score_disp(game_score_disp));
 	
 	
 endmodule

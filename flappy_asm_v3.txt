@@ -1,0 +1,424 @@
+.text 
+main: addi $r1, $r0, 240 # bird y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r2, $r0, 472 # pipe 1 x coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r3, $r0, 200 # pipe 1 y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r4, $r0, 90 # pipe 2 x coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r5, $r0, 350 # pipe 2 y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r19, $r0, 260 # pipe 3 x coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r20, $r0, 275 # pipe 3 y coordinate
+noop
+noop
+noop
+noop
+noop
+addi $r7, $r0, 15000 # animation delay
+noop
+noop
+noop
+noop
+noop
+addi $r8, $r0, 1 # jump lower lim
+noop
+noop
+noop
+noop
+noop
+addi $r9, $r0, 12 # jump height
+noop
+noop
+noop
+noop
+noop
+addi $r13, $r0, 450 # bird lowest limit
+noop
+noop
+noop
+noop
+noop
+addi $r14, $r0, 5 # pipe left limit
+noop
+noop
+noop
+noop
+noop
+addi $r15, $r0, 320 # bird x left side
+noop
+noop
+noop
+noop
+noop
+addi $r10, $r0, 0 # reset game over flag
+noop
+noop
+noop
+noop
+noop
+addi $r11, $r0, 0 # reset game score
+
+
+loop: noop
+noop
+noop
+noop
+noop
+jal move_pipe
+noop
+noop
+noop
+noop
+noop
+jal bird_fall
+noop
+noop
+noop
+noop
+noop
+jal check_collision
+noop
+noop
+noop
+noop
+noop
+jal animation_delay
+noop
+noop
+noop
+noop
+noop
+jal increment_score
+noop
+noop
+noop
+noop
+noop
+bex jump_initiated
+noop
+noop
+noop
+noop
+noop
+j loop
+
+jump_initiated: noop
+noop
+noop
+noop
+noop
+sub $r12, $r12, $r12 # reset jump counter
+noop
+noop
+noop
+noop
+noop
+jumping_loop: noop
+noop
+noop
+noop
+noop
+jal move_pipe
+noop
+noop
+noop
+noop
+noop
+jal bird_jump
+noop
+noop
+noop
+noop
+noop
+jal check_collision
+noop
+noop
+noop
+noop
+noop
+jal animation_delay
+noop
+noop
+noop
+noop
+noop
+jal increment_score
+noop
+noop
+noop
+noop
+noop
+bex jump_initiated
+noop
+noop
+noop
+noop
+noop
+bne $r12, $r9, jumping_loop
+noop
+noop
+noop
+noop
+noop
+j loop
+
+
+move_pipe: noop
+noop
+noop
+noop
+noop
+bne $r14, $r2, keep_moving_left
+noop
+noop
+noop
+noop
+noop
+addi $r2, $r0, 575 # bring pipe back to right side
+noop
+noop
+noop
+noop
+noop
+keep_moving_left: bne $r14, $r4, keep_moving_left2
+noop
+noop
+noop
+noop
+noop
+addi $r4, $r0, 575 # bring second pipe back to right side
+noop
+noop
+noop
+noop
+noop
+keep_moving_left2: bne $r14, $r19, keep_moving_left3
+noop
+noop
+noop
+noop
+noop
+addi $r19, $r0, 575 # bring third pipe back to right side
+noop
+noop
+noop
+noop
+noop
+keep_moving_left3: addi $r2, $r2, -1
+noop
+noop
+noop
+noop
+noop
+addi $r4, $r4, -1
+noop
+noop
+noop
+noop
+noop
+addi $r19, $r19, -1
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+bird_fall: noop
+noop
+noop
+noop
+noop
+bne $r1, $r13, keep_falling
+noop
+noop
+noop
+noop
+noop
+j collision_detected
+noop
+noop
+noop
+noop
+noop
+keep_falling: addi $r1, $r1, 1
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+bird_jump: noop
+noop
+noop
+noop
+noop
+bne $r1, $r0, keep_jumping
+noop
+noop
+noop
+noop
+noop
+addi $r1, $r1, 1
+noop
+noop
+noop
+noop
+noop
+keep_jumping: addi $r1, $r1, -1
+noop
+noop
+noop
+noop
+noop
+addi $r12, $r12, 1
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+check_collision: noop
+noop
+noop
+noop
+noop
+bne $r8, $r0, collision_detected
+noop
+noop
+noop
+noop
+noop
+jr $r31
+
+increment_score: noop
+noop
+noop
+noop
+noop
+addi $r16, $r2, 54 # Pipe 1 right side
+noop
+noop
+noop
+noop
+noop
+addi $r17, $r4, 54 # Pipe 2 right side
+noop
+noop
+noop
+noop
+noop
+addi $r18, $r19, 54 # Pipe 3 right side
+noop
+noop
+noop
+noop
+noop
+bne $r16, $r15, skip_add1
+noop
+noop
+noop
+noop
+noop
+addi $r11, $r11, 1
+skip_add1: bne $r17, $r15, skip_add2
+noop
+noop
+noop
+noop
+noop
+addi $r11, $r11, 1
+skip_add2: bne $r18, $r15, skip_add3
+noop
+noop
+noop
+noop
+noop
+addi $r11, $r11, 1
+skip_add3: noop
+noop
+noop
+noop
+noop
+jr $r31
+
+collision_detected: noop
+noop
+noop
+noop
+noop
+noop
+addi $r10, $r0, 1 # set gameover_flag
+noop
+noop
+noop
+noop
+noop
+jal animation_delay
+noop
+noop
+noop
+noop
+noop
+bex main # exit on button press
+noop
+noop
+noop
+noop
+noop
+j collision_detected
+
+animation_delay: noop
+noop
+noop
+noop
+noop
+noop
+addi $r6, $r6, 1 # increment delay counter
+noop
+noop
+noop
+noop
+noop
+bne $r6, $r7, animation_delay
+noop
+noop
+noop
+noop
+noop
+sub $r6, $r6, $r6
+noop
+noop
+noop
+noop
+noop
+jr $r31

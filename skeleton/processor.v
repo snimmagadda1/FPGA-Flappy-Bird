@@ -1,12 +1,14 @@
-module processor(clock, reset, ps2_key_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag, game_score);
+module processor(clock, reset, button_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, gameover_flag, game_score, collision_flag);
 
-	input clock, reset, ps2_key_pressed;
+	input clock, reset, button_pressed, collision_flag;
 	
-	output [31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, game_score;
+	output [31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, game_score;
 	
 	output gameover_flag;
 	
 	wire [31:0] gameover_flag_long;
+	wire [31:0] collision_flag_long;
+	assign collision_flag_long = {31'b0, collision_flag};
 
 	// imem inputs - use this wire for your processor as input to your imem
 	wire [31:0] pc;
@@ -69,7 +71,7 @@ module processor(clock, reset, ps2_key_pressed, bird_y, pipe1_x, pipe1_y, pipe2_
 	wire [31:0] writeback, DXAin, DXAout, DXBin, DXBout, regAout, regBout;
 	wire [4:0] ra, rb, rw;
 	wire we;
-	regfile registerfile(clock, we, reset, rw, ra, rb, writeback, regAout, regBout, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag_long, game_score);
+	regfile registerfile(clock, we, reset, rw, ra, rb, writeback, regAout, regBout, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, gameover_flag_long, game_score, collision_flag_long);
 	
 	assign gameover_flag = gameover_flag_long[0];
 	
@@ -139,8 +141,10 @@ module processor(clock, reset, ps2_key_pressed, bird_y, pipe1_x, pipe1_y, pipe2_
 	// STATUS stuff
 	
 	wire [31:0] pickstatusout;
+	
 	mux32bit2to1 pickstatus(32'b1, T, setx, pickstatusout);
-	register statusreg(clock, setx | alu_exception | ps2_key_pressed, reset | ~ps2_key_pressed, pickstatusout, status); // check if bex is supposed to reset
+	register statusreg(clock, setx | alu_exception | button_pressed, reset | ~button_pressed, pickstatusout, status);
+	
 	
 	// X/M pipeline register
 	wire [31:0] XMIRin, XMIRout;
@@ -759,7 +763,7 @@ module sll_mult(upper, lower, out);
 endmodule
 
 module regfile(clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg, 
-ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag_long, game_score);
+ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, gameover_flag_long, game_score, collision_flag_long);
 	input clock, ctrl_writeEnable, ctrl_reset;
    input[4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
    input[31:0] data_writeReg;
@@ -772,7 +776,9 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_
 	wire[31:0] ctrl_readA_decoded;
 	wire[31:0] ctrl_readB_decoded;
 	
-	output[31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, gameover_flag_long, game_score;
+	input [31:0] collision_flag_long;
+	
+	output[31:0] bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, gameover_flag_long, game_score;
 	
 	fiveto32decoder rw(.ctrl(ctrl_writeReg), .onehot(ctrl_write_decoded));
 	fiveto32decoder ra(.ctrl(ctrl_readRegA), .onehot(ctrl_readA_decoded));
@@ -798,8 +804,16 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_
 			assign readOutA[i] = readOut[i];
 			assign readOutB[i] = readOut[i];
 			
+			if (i == 8)
+			begin
+			register onereg(.clock(clock), .ctrl_writeEnable(1'b1),
+			.ctrl_reset(resets[i]), .writeIn(collision_flag_long), .readOut(readOut[i]));	
+			end
+			else
+			begin
 			register onereg(.clock(clock), .ctrl_writeEnable(writeEn[i]),
-			.ctrl_reset(resets[i]), .writeIn(data_writeReg), .readOut(readOut[i]));		
+			.ctrl_reset(resets[i]), .writeIn(data_writeReg), .readOut(readOut[i]));	
+			end
 		end
 	endgenerate
 	
@@ -808,6 +822,8 @@ ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA, data_readRegB, bird_
 	assign pipe1_y = readOut[3];
 	assign pipe2_x = readOut[4];
 	assign pipe2_y = readOut[5];
+	assign pipe3_x = readOut[19];
+	assign pipe3_y = readOut[20];
 	assign gameover_flag_long = readOut[10];
 	assign game_score = readOut[11];
 endmodule

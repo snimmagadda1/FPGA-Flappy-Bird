@@ -1,0 +1,16 @@
+module lfsr_32bit(
+  input  clk,
+  input  rst_n,
+
+  output [31:0] data
+);
+
+wire feedback = data[31] ^ data[1] ;
+
+always @(posedge clk or negedge rst_n)
+  if (~rst_n) 
+    data <= 32'hffffffff;
+  else
+    data <= {data[30:0], feedback} ;
+
+endmodule

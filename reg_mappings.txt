@@ -13,7 +13,7 @@ $r6 = Delay Counter
 
 $r7 = Delay (current 40,000)
 
-$r8 = Unused
+$r8 = Collision flag
 
 $r9 = Jump height
 
@@ -27,26 +27,10 @@ $r13 = Screen lower limit
 
 $r14 = Pipe left limit
 
-$r15 = Upper pipe 1 bottom
+$r15 = Bird x left
 
-$r16 = Lower pipe 1 top
+$r16 = Pipe 1 Right Side
 
-$r17 = Pipes 1 left
+$r17 = Pipe 2 Right Side
 
-$r18 = Pipes 1 right
-
-$r19 = Bird x left
-
-$r20 = Bird x right
-
-$r21 = Bird y bottom
-
-$r22 = Gameover Delay
-
-$r23 = Upper pipe 2 bottom
-
-$r24 = lower pipe 2 top
-
-$r25 = pipes 2 left
-
-$r26 = pipes 2 right
+$r22 = Gameover delay
