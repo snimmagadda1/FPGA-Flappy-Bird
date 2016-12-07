@@ -16,7 +16,10 @@ module vga_controller(iRST_n,
 							 gameover_flag,
 							 collision_flag,
 							 game_score,
-							 game_score_disp);
+							 game_score_disp,
+							 pick_board,
+							 butt_posedge_in,
+							 butt_posedge_out);
 input iRST_n;
 input iVGA_CLK;
 output reg oBLANK_n;
@@ -39,7 +42,7 @@ wire cBLANK_n,cHS,cVS,rst;
 reg [18:0] bird_x = 19'd320;
 input [31:0] bird_y_long, pipe1_x_long, pipe1_y_long, pipe2_x_long, pipe2_y_long, pipe3_x_long, pipe3_y_long, game_score;
 input gameover_flag;
-
+input pick_board;
 
 wire [18:0] bird_y;
 assign bird_y = bird_y_long[18:0];
@@ -62,7 +65,7 @@ assign pipe3_x = pipe3_x_long[18:0];
 wire [18:0] pipe3_y;
 assign pipe3_y = pipe3_y_long[18:0];
 
-reg [18:0] gap_width = 19'd150;
+reg [18:0] gap_width = 19'd120;
 
 
 
@@ -72,6 +75,7 @@ wire [18:0] screen_height = 19'd480;
 wire [18:0] bird_width = 19'd45;
 wire [18:0] bird_height = 19'd35;
 wire [16:0] bird_static_start = 17'd0;
+wire [16:0] board_static_start = 17'd21760;
 reg [16:0] bird_static_curr = 17'd0;
 
 wire [18:0] lower_pipe_width = 19'd54;
@@ -236,7 +240,8 @@ collision_detection c(bird_left, bird_right, bird_top, bird_bottom,
 									upper_pipe2_left, upper_pipe2_right, upper_pipe2_bottom, lower_pipe2_top, 
 									upper_pipe3_left, upper_pipe3_right, upper_pipe3_bottom, lower_pipe3_top, c_flag);
 															
-
+input butt_posedge_in;
+output reg butt_posedge_out;
 
 
 	
@@ -256,7 +261,14 @@ begin
 	  upper_pipe3_pixels_drawn=19'd0;
 	  gameover_pixels_drawn = 19'd0;
 	  
-	  bird_static_curr=bird_static_start;
+	  if (pick_board)
+	  begin
+			bird_static_curr=board_static_start;
+	  end
+	  else
+	  begin
+			bird_static_curr=bird_static_start;
+	  end
 	  lower_pipe_static_curr=lower_pipe_static_start;
 	  upper_pipe_static_curr=upper_pipe_static_start;
 	  lower_pipe2_static_curr=lower_pipe2_static_start;
@@ -324,6 +336,8 @@ begin
 			
 			game_score_disp <= game_score;
 			
+			butt_posedge_out <= butt_posedge_in;
+			
 		end
 	
   end
@@ -341,7 +355,15 @@ begin
 	  upper_pipe3_pixels_drawn=19'd0;
 	  gameover_pixels_drawn = 19'd0;
 	  
-	  bird_static_curr=bird_static_start;
+	  if (pick_board)
+	  begin
+			bird_static_curr=board_static_start;
+	  end
+	  else
+	  begin
+			bird_static_curr=bird_static_start;
+	  end
+	  
 	  lower_pipe_static_curr=lower_pipe_static_start;
 	  upper_pipe_static_curr=upper_pipe_static_start;
 	  lower_pipe2_static_curr=lower_pipe2_static_start;
@@ -408,6 +430,8 @@ begin
 			collision_flag <= c_flag;
 			
 			game_score_disp <= game_score;
+			
+			butt_posedge_out <= butt_posedge_in;
 			
 		end
 		

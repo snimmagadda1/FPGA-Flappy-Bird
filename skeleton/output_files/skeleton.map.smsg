@@ -1,3 +1,3 @@
-Warning (10273): Verilog HDL warning at processor.v(806): extended using "x" or "z" File: C:/Users/Student/Desktop/FPGA_flappy_bird_final/skeleton/processor.v Line: 806
-Warning (10273): Verilog HDL warning at processor.v(807): extended using "x" or "z" File: C:/Users/Student/Desktop/FPGA_flappy_bird_final/skeleton/processor.v Line: 807
-Warning (10268): Verilog HDL information at vga_controller.v(243): always construct contains both blocking and non-blocking assignments File: C:/Users/Student/Desktop/FPGA_flappy_bird_final/skeleton/vga_controller.v Line: 243
+Warning (10273): Verilog HDL warning at processor.v(808): extended using "x" or "z" File: C:/Users/Student/Desktop/FPGA_flappy_bird_final/skeleton/processor.v Line: 808
+Warning (10273): Verilog HDL warning at processor.v(809): extended using "x" or "z" File: C:/Users/Student/Desktop/FPGA_flappy_bird_final/skeleton/processor.v Line: 809
+Warning (10268): Verilog HDL information at vga_controller.v(248): always construct contains both blocking and non-blocking assignments File: C:/Users/Student/Desktop/FPGA_flappy_bird_final/skeleton/vga_controller.v Line: 248

@@ -244,6 +244,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "pick_board",
+					"strict" : false
+				},
+				{
 					"name" : "button_pressed",
 					"strict" : false
 				}

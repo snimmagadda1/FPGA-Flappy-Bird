@@ -12,7 +12,8 @@ module skeleton(resetn,
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,															//	VGA Blue[9:0]
 	CLOCK_50,														// 50 MHz clock
-	button_pressed);  											// KEY 1		
+	button_pressed,
+	pick_board);  											// KEY 1		
 		
 	////////////////////////	VGA	////////////////////////////
 	output			VGA_CLK;   				//	VGA Clock
@@ -48,6 +49,7 @@ module skeleton(resetn,
 	wire	[7:0]	 ps2_out;
 	
 	input button_pressed;
+	input pick_board;
 	
 	wire butt_pressed;
 	assign butt_pressed = ~button_pressed;
@@ -76,10 +78,16 @@ module skeleton(resetn,
 	wire [31:0] piperandout;
 	lfsr_32bit PRNG1(clock, resetn, piperandout, 32'hf0f0f0f0);
 	wire [31:0] pipe_y_rand;
-	assign pipe_y_rand = piperandout % 200 + 140;
+	assign pipe_y_rand = piperandout % 50 + 190;
+	
+	
+	wire butt_posedge, bex_return;
+	rising_edge_detect(butt_pressed, ~resetn, clock, butt_posedge, reset_jump_flag);
+	
+	wire butt_posedge_synced;
 	
 	// your processor
-	processor myprocessor(clock, ~resetn, butt_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, pipe_y_rand, gameover_flag, game_score, collision_flag);
+	processor myprocessor(clock, ~resetn, butt_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, pipe_y_rand, gameover_flag, game_score, collision_flag, bex_return);
 	
 	// keyboard controller
 	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
@@ -98,7 +106,7 @@ module skeleton(resetn,
 	Hexadecimal_To_Seven_Segment hex8(4'b0, seg8);
 	
 	// some LEDs that you could use for debugging if you wanted
-	assign leds = 8'b00010100;
+	assign leds = {7'b0, butt_posedge};
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
@@ -121,7 +129,24 @@ module skeleton(resetn,
 								 .gameover_flag(gameover_flag),
 								 .collision_flag(collision_flag),
 								 .game_score(game_score),
-								 .game_score_disp(game_score_disp));
+								 .game_score_disp(game_score_disp),
+								 .pick_board(pick_board),
+								 .butt_posedge_in(butt_posedge),
+								 .butt_posedge_out(butt_posedge_synced));
 	
 	
+endmodule
+
+module rising_edge_detect(sig, rst, clk, sig_edge, bex_in);
+
+	input sig, rst, clk, bex_in;
+	wire sig_edge_in;
+	wire dffout;
+	output sig_edge;
+	
+	dffe d1(.d(~sig), .clk(clk), .ena(1'b1), .prn(1'b1), .clrn(1'b1), .q(dffout));
+
+	
+	dffe d2(.d(sig & dffout), .clk(clk), .ena(sig & dffout), .prn(1'b1), .clrn(~bex_in), .q(sig_edge));
+
 endmodule

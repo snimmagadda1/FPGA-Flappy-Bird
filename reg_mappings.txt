@@ -40,3 +40,5 @@ $r19 = Pipe 3 X Position
 $r20 = Pipe 3 Y Position
 
 $r21 = Random Y Position
+
+$r22 = Reset jump flag

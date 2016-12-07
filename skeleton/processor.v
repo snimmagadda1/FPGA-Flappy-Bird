@@ -1,12 +1,12 @@
-module processor(clock, reset, button_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, pipe_y_rand, gameover_flag, game_score, collision_flag);
+module processor(clock, reset, button_posedge, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, pipe_y_rand, gameover_flag, game_score, collision_flag, bex_return);
 
-	input clock, reset, button_pressed, collision_flag;
+	input clock, reset, button_posedge, collision_flag;
 	
 	output [31:0] bird_y, pipe1_x, pipe2_x, pipe3_x, game_score;
 	output [31:0] pipe1_y, pipe2_y, pipe3_y;
 	input [31:0] pipe_y_rand;
 	
-	output gameover_flag;
+	output gameover_flag, bex_return;
 	
 	wire [31:0] gameover_flag_long;
 	wire [31:0] collision_flag_long;
@@ -143,9 +143,10 @@ module processor(clock, reset, button_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x
 	// STATUS stuff
 	
 	wire [31:0] pickstatusout;
-	
+
+	assign bex_return = bex;
 	mux32bit2to1 pickstatus(32'b1, T, setx, pickstatusout);
-	register statusreg(clock, setx | alu_exception | button_pressed, reset | ~button_pressed, pickstatusout, status);
+	register statusreg(clock, setx | alu_exception | button_posedge, reset | ~button_posedge, pickstatusout, status);
 	
 	
 	// X/M pipeline register
@@ -361,6 +362,7 @@ module regselectequal(reg1, reg2, isEqual);
 						  (reg1[2] ~^ reg2[2]) & (reg1[1] ~^ reg2[1]) &
 						  (reg1[0] ~^ reg2[0]);
 endmodule
+
 
 module wcontrol(ir, rw, we, lw, jal);
 	input [31:0] ir;
