@@ -29,7 +29,7 @@ noop
 noop
 noop
 noop
-addi $r19, $r0, 260 # pipe 3 x coordinate
+addi $r19, $r0, 285 # pipe 3 x coordinate
 noop
 noop
 noop
@@ -207,6 +207,12 @@ noop
 noop
 noop
 noop
+add $r3, $r0, $r21 # set random y value
+noop
+noop
+noop
+noop
+noop
 keep_moving_left: bne $r14, $r4, keep_moving_left2
 noop
 noop
@@ -219,6 +225,12 @@ noop
 noop
 noop
 noop
+add $r5, $r0, $r21 # set random y value
+noop
+noop
+noop
+noop
+noop
 keep_moving_left2: bne $r14, $r19, keep_moving_left3
 noop
 noop
@@ -226,6 +238,12 @@ noop
 noop
 noop
 addi $r19, $r0, 575 # bring third pipe back to right side
+noop
+noop
+noop
+noop
+noop
+add $r20, $r0, $r21 #set random y value
 noop
 noop
 noop

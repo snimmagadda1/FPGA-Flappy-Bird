@@ -33,4 +33,10 @@ $r16 = Pipe 1 Right Side
 
 $r17 = Pipe 2 Right Side
 
-$r22 = Gameover delay
+$r18 = Pipe 3 Right Side
+
+$r19 = Pipe 3 X Position
+
+$r20 = Pipe 3 Y Position
+
+$r21 = Random Y Position

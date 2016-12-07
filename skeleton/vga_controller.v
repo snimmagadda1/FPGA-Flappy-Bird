@@ -228,15 +228,18 @@ video_sync_generator LTM_ins (.vga_clk(iVGA_CLK),
 output reg collision_flag;		
 wire c_flag;				
 
+
 output reg [31:0] game_score_disp;		
 
 collision_detection c(bird_left, bird_right, bird_top, bird_bottom,
 									upper_pipe_left, upper_pipe_right, upper_pipe_bottom, lower_pipe_top,
 									upper_pipe2_left, upper_pipe2_right, upper_pipe2_bottom, lower_pipe2_top, 
 									upper_pipe3_left, upper_pipe3_right, upper_pipe3_bottom, lower_pipe3_top, c_flag);
-									
-									
-									
+															
+
+
+
+	
 always@(posedge iVGA_CLK,negedge iRST_n)
 begin
   if (!iRST_n)
@@ -700,6 +703,7 @@ begin
 end
 
 endmodule
+
  	
 module collision_detection(bird_left, bird_right, bird_top, bird_bottom,
 									pipe1_left, pipe1_right, upper_pipe1_bottom, lower_pipe1_top,

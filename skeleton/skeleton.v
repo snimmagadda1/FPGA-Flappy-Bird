@@ -73,16 +73,13 @@ module skeleton(resetn,
 	
 	// UNCOMMENT FOLLOWING LINE AND COMMENT ABOVE LINE TO RUN AT 50 MHz
 	//assign clock = inclock;
-//	
-//	lfsr_32bit PRNG1(clock, resetn, pipe1randout, 32'hf0f0f0f0);
-//	lfsr_32bit PRNG2(clock, resetn, pipe2randout, 32'hffffffff);
-//	lfsr_32bit PRNG3(clock, resetn, pipe3randout, 32'h00000000);
-//	assign pipe1_y = pipe1randout % 200 + 240;
-//	assign pipe2_y = pipe2randout % 200 + 240;
-//	assign pipe3_y = pipe3randout % 200 + 240;
+	wire [31:0] piperandout;
+	lfsr_32bit PRNG1(clock, resetn, piperandout, 32'hf0f0f0f0);
+	wire [31:0] pipe_y_rand;
+	assign pipe_y_rand = piperandout % 200 + 140;
 	
 	// your processor
-	processor myprocessor(clock, ~resetn, butt_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, gameover_flag, game_score, collision_flag);
+	processor myprocessor(clock, ~resetn, butt_pressed, bird_y, pipe1_x, pipe1_y, pipe2_x, pipe2_y, pipe3_x, pipe3_y, pipe_y_rand, gameover_flag, game_score, collision_flag);
 	
 	// keyboard controller
 	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
