@@ -5,7 +5,7 @@ noop
 noop
 noop
 noop
-addi $r2, $r0, 472 # pipe 1 x coordinate
+addi $r2, $r0, 71 # pipe 1 x coordinate
 noop
 noop
 noop
@@ -17,7 +17,7 @@ noop
 noop
 noop
 noop
-addi $r4, $r0, 90 # pipe 2 x coordinate
+addi $r4, $r0, 261 # pipe 2 x coordinate
 noop
 noop
 noop
@@ -29,13 +29,13 @@ noop
 noop
 noop
 noop
-addi $r19, $r0, 285 # pipe 3 x coordinate
+addi $r19, $r0, 451 # pipe 3 x coordinate
 noop
 noop
 noop
 noop
 noop
-addi $r20, $r0, 275 # pipe 3 y coordinate
+addi $r20, $r0, 225 # pipe 3 y coordinate
 noop
 noop
 noop
@@ -286,7 +286,7 @@ noop
 noop
 noop
 noop
-keep_falling: addi $r1, $r1, 1
+keep_falling: addi $r1, $r1, 2
 noop
 noop
 noop
@@ -440,3 +440,4 @@ noop
 noop
 noop
 jr $r31
+
